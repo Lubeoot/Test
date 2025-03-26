@@ -37,7 +37,7 @@ COMMENDATION_PERCENT_POLL 0.05
 ## To speed things up make the number negative, to slow things down, make the number positive.
 
 ## These modify the run/walk speed of all mobs before the mob-specific modifiers are applied.
-SPRINT_DELAY 1.2
+SPRINT_DELAY 1.5
 RUN_DELAY 1.8
 WALK_DELAY 4
 
@@ -55,21 +55,21 @@ MULTIPLICATIVE_MOVESPEED /mob/living/basic 0
 
 ## NAMES ###
 ## If uncommented this adds a random surname to a player's name if they only specify one name.
-HUMANS_NEED_SURNAMES
+#HUMANS_NEED_SURNAMES
 
 ## If uncommented, this forces all players to use random names !and appearances!.
 #FORCE_RANDOM_NAMES
 
 ## Unhash this to turn on automatic reopening of a player's job if they suicide at roundstart
-#REOPEN_ROUNDSTART_SUICIDE_ROLES
+REOPEN_ROUNDSTART_SUICIDE_ROLES
 
 ## Unhash to enable reopening of command level positions
-#REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_POSITIONS
+REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_POSITIONS
 
 ## Define the delay for roles to be reopened after the round starts in seconds.
 ## Has a minimum delay of 30 seconds, though it's suggested to keep over 1 min
 ## If undefined, the delay defaults to 4 minutes.
-#REOPEN_ROUNDSTART_SUICIDE_ROLES_DELAY 240
+REOPEN_ROUNDSTART_SUICIDE_ROLES_DELAY 240
 
 ## Unhash to enable a printed command report for reopened roles listing what roles were reopened.
 #REOPEN_ROUNDSTART_SUICIDE_ROLES_COMMAND_REPORT
@@ -179,7 +179,7 @@ ALLOW_AI_MULTICAM
 GATEWAY_DELAY 18000
 
 ## The probability of the gateway mission being a config one
-CONFIG_GATEWAY_CHANCE 0
+CONFIG_GATEWAY_CHANCE 50
 
 ## ACCESS ###
 
@@ -195,16 +195,16 @@ MINIMAL_ACCESS_THRESHOLD 20
 #JOBS_HAVE_MINIMAL_ACCESS
 
 ## Uncomment to give assistants maint access.
-#ASSISTANTS_HAVE_MAINT_ACCESS
+ASSISTANTS_HAVE_MAINT_ACCESS
 
 ## Uncoment to give security maint access. Note that if you dectivate JOBS_HAVE_MINIMAL_ACCESS security already gets maint from that.
-#SECURITY_HAS_MAINT_ACCESS
+SECURITY_HAS_MAINT_ACCESS
 
 ## Uncomment to give everyone maint access.
-#EVERYONE_HAS_MAINT_ACCESS
+EVERYONE_HAS_MAINT_ACCESS
 
 ## Comment this out this to make security officers spawn in departmental security posts
-#SEC_START_BRIG
+SEC_START_BRIG
 
 ## This variable is how you may configure "Scaling Access" for Departmental Security Officers.
 ## Set to 0/commented out for "off", Departmental Security Officers will never get additional room-specific access (beyond general departmental doors).
@@ -219,7 +219,7 @@ DEPSEC_ACCESS_LEVEL 1
 
 ## NEAR-DEATH EXPERIENCE ###
 ## Comment this out to disable mobs hearing ghosts when unconscious and very close to death
-NEAR_DEATH_EXPERIENCE
+#NEAR_DEATH_EXPERIENCE
 
 ## NON-VOCAL SILICONS ###
 ## Uncomment these to stop the AI, or cyborgs, from having vocal communication.
@@ -325,7 +325,7 @@ LAW_WEIGHT drone,0
 ## SILICON LAW MAX AMOUNT ###
 ## The maximum number of laws a silicon can have
 ## Attempting to upload laws past this point will fail unless the AI is reset
-SILICON_MAX_LAW_AMOUNT 12
+SILICON_MAX_LAW_AMOUNT 15
 
 ##------------------------------------------------
 
@@ -352,18 +352,18 @@ ROUNDSTART_RACES moth
 ROUNDSTART_RACES tundra
 ROUNDSTART_RACES plasmaman
 #ROUNDSTART_RACES shadow
-ROUNDSTART_RACES oozeling
+#ROUNDSTART_RACES oozeling
 ROUNDSTART_RACES ipc
-ROUNDSTART_RACES simian
-ROUNDSTART_RACES arachnid
-ROUNDSTART_RACES apid
-ROUNDSTART_RACES satyr
-ROUNDSTART_RACES ornithid
+#ROUNDSTART_RACES simian
+#ROUNDSTART_RACES arachnid
+#ROUNDSTART_RACES apid
+#ROUNDSTART_RACES satyr
+#ROUNDSTART_RACES ornithid
 
 ## Races that are better than humans in some ways, but worse in others
 ROUNDSTART_RACES ethereal
 ROUNDSTART_RACES goblin
-ROUNDSTART_RACES floran
+#ROUNDSTART_RACES floran
 #ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES abductor
 #ROUNDSTART_RACES synth
@@ -419,7 +419,7 @@ ROUNDSTART_RACES floran
 ## The probability for nonhuman cadavers to spawn in the morgue.
 ## Only used if MORGUE_CADAVER_DISABLE_NONHUMANS is commented out
 ## If left undefined, defaults to 50%.
-MORGUE_CADAVER_OTHER_SPECIES_PROBABILITY 50
+MORGUE_CADAVER_OTHER_SPECIES_PROBABILITY 90
 
 ## A single specific Species ID to supplement human morgue cadavers.
 ## Set MORGUE_CADAVER_OTHER_SPECIES_PROBABILITY to determine the chances between being a human and this specific species.
@@ -438,7 +438,7 @@ OVERFLOW_CAP -1
 SPOOKTOBER_ENABLED
 
 ## Uncomment to bring back old grey suit assistants instead of the now default rainbow colored assistants.
-#GREY_ASSISTANTS
+GREY_ASSISTANTS
 
 ##Limit Spell Choices##
 ## Uncomment to disallow wizards from using certain spells that may be too chaotic/fun for your playerbase
@@ -490,7 +490,7 @@ ARRIVALS_SHUTTLE_DOCK_WINDOW 55
 
 ## How many wirechewing rodents you want to spawn on exposed maintenane wires at the start of the round. You may wish to set this to 0 if you're testing powernets.
 
-MICE_ROUNDSTART 10
+MICE_ROUNDSTART 5
 
 ## If the percentage of players alive (doesn't count conversions) drops below this threshold the emergency shuttle will be forcefully called (provided it can be)
 #EMERGENCY_SHUTTLE_AUTOCALL_THRESHOLD 0.2
@@ -552,7 +552,7 @@ TWITCH_KEY mrhouse
 
 ## How long (in minutes) after roundstart should the server start an automatic crew transfer vote?
 ## Defaults to 90 minutes. Set to 0 to completely disable automatic crew transfer votes.
-TRANSFER_VOTE_TIME 90
+TRANSFER_VOTE_TIME 0
 
 ## If players vote against a crew transfer, how long (in minutes) until another automatic transfer vote will be initiated?
 ## Defaults to 30 minutes. Set to 0 to completely disable subsequent crew transfer votes.

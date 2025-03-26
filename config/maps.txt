@@ -14,34 +14,34 @@ Format:
 endmap
 
 map heliostation
-	minplayers 25
+	minplayers 0
 	votable
 endmap
 
 map metastation
 	#default
-	minplayers 5
+	minplayers 0
 	votable
 endmap
 
 map deltastation
-	minplayers 50
+	minplayers 0
 	votable
 endmap
 
 map kilostation
 	minplayers 5
-	votable
+	disabled
 endmap
 
 map icebox
-	minplayers 25
-	votable
+	minplayers 0
+	disabled
 endmap
 
 map theseus
 	minplayers 5
-	votable
+	disabled
 endmap
 
 map tramstation
@@ -56,22 +56,22 @@ map multiz_debug
 endmap
 
 map boxstation
-	minplayers 25
+	minplayers 20
 	votable
 endmap
 
 map blueshift
-	minplayers 75
+	minplayers 35
 	votable
 endmap
 
 map voidraptor
-	minplayers 40
+	minplayers 20
 	votable
 endmap
 
 map ouroboros
-	votable
+	disabled
 endmap
 
 map graveyard

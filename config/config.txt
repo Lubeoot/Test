@@ -19,7 +19,7 @@ $include plexora.txt
 # There are various options which are hard-locked for security reasons.
 
 ## Server name: This appears at the top of the screen in-game and in the BYOND hub. Uncomment and replace 'tgstation' with the name of your choice.
-# SERVERNAME tgstation
+ SERVERNAME Sharty Station - |LRP|NANITES/MORE|NO NERFS|
 
 ## Server SQL name: This is the name used to identify the server to the SQL DB, distinct from SERVERNAME as it must be at most 32 characters.
 # SERVERSQLNAME tgstation
@@ -28,13 +28,13 @@ $include plexora.txt
 STATIONNAME Space Station 13
 
 ## Put on byond hub: Uncomment this to put your server on the byond hub.
-#HUB
+HUB
 
 ## Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 300
 
 ## Round End Time: This is the amount of time after the round ends that players have to murder death kill each other.
-ROUND_END_COUNTDOWN 90
+ROUND_END_COUNTDOWN 120
 
 ## Comment this out if you want to use the SQL based admin system, the legacy system uses admins.txt.
 ## You need to set up your database to use the SQL based system.
@@ -107,19 +107,19 @@ ID_CONSOLE_JOBSLOT_DELAY 30
 #ALLOW_VOTE_RESTART
 
 ## allow players to initiate a map-change vote
-#ALLOW_VOTE_MAP
+ALLOW_VOTE_MAP
 
 ## allow players to rock the vote, or to vote on the map again if they didn't like the last results
-#ALLOW_ROCK_THE_VOTE
+ALLOW_ROCK_THE_VOTE
 
 ## the number of times you wish to allow players to rock the vote in a given shift
 MAX_ROCKING_VOTES 1
 
 ## min delay (deciseconds) between voting sessions (default 10 minutes)
-VOTE_DELAY 6000
+VOTE_DELAY 3000
 
 ## time period (deciseconds) which voting session will last (default 1 minute)
-VOTE_PERIOD 600
+VOTE_PERIOD 1200
 
 ## prevents dead players from voting or starting votes
 # NO_DEAD_VOTE
@@ -131,7 +131,7 @@ VOTE_PERIOD 600
 NORESPAWN
 
 ## set a hosted by name for unix platforms
-HOSTEDBY Yournamehere
+HOSTEDBY Lubeoot
 
 ## Uncomment this to stop people connecting to your server without a registered ckey. (i.e. guest-* are all blocked from connecting)
 GUEST_BAN
@@ -153,7 +153,7 @@ CHECK_RANDOMIZER
 #IPINTEL_DOMAIN check.getipintel.net
 
 ## Uncomment to allow web client connections
-#ALLOW_WEBCLIENT
+ALLOW_WEBCLIENT
 
 ## Uncomment to restrict web client connections to byond members
 ## This makes for a nice pay gate to cut down on ban evading, as the webclient's cid system isn't that great
@@ -168,10 +168,10 @@ CHECK_RANDOMIZER
 # SERVER ss13.example.com:2506
 
 ## forum address
-# FORUMURL http://tgstation13.org/phpBB/index.php
+# FORUMURL https://soyjak.st/mtv/index.html
 
 ## Wiki address
-# WIKIURL http://www.tgstation13.org/wiki
+# WIKIURL https://paradisestation.org/tgwiki2/index.php
 
 ## Rules address
 # RULESURL http://www.tgstation13.org/wiki/Rules
@@ -243,7 +243,7 @@ ALLOW_HOLIDAYS
 TICKLAG 0.5
 
 ##Can also be set as per-second value, the following value is identical to the above.
-#FPS 20
+#FPS 60
 
 ## Comment this out to disable automuting
 #AUTOMUTE_ON
@@ -318,7 +318,7 @@ NOTIFY_NEW_PLAYER_ACCOUNT_AGE 1
 #PANIC_SERVER_NAME [Put the name here]
 
 ## Uncomment to have the changelog file automatically open when a user connects and hasn't seen the latest changelog
-#AGGRESSIVE_CHANGELOG
+AGGRESSIVE_CHANGELOG
 
 ## Comment this out if you've used the mass conversion sql proc for notes or want to stop converting notes
 AUTOCONVERT_NOTES
@@ -370,7 +370,7 @@ AUTOADMIN_RANK Game Master
 CLIENT_ERROR_VERSION 515
 CLIENT_ERROR_MESSAGE Your version of byond is not supported. Please upgrade.
 ## The minimum build needed for joining the server.
-CLIENT_ERROR_BUILD 1590
+CLIENT_ERROR_BUILD 1600
 
 ## TOPIC RATE LIMITING
 ## This allows you to limit how many topic calls (clicking on an interface window) the client can do in any given game second and/or game minute.
