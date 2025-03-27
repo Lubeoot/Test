@@ -149,9 +149,12 @@
 	return randname
 
 /datum/species/plasmaman/get_species_description()
-	return "Found on the Icemoon of Freyja, plasmamen consist of colonial \
-		fungal organisms which together form a sentient being. In human space, \
-		they're usually attached to skeletons to afford a human touch."
+	return "The collapse of the United Soviet Space Republics brough with it \
+		the abandonment of one of it's largest research stations on REDACTED, \
+		transforming an odd few-thousand something into skeletal figures made of \
+		of plasma with eldritch organs, eventually recontact was made with Nanotrasen, \
+		who has employed the species for its enviromental uniqueness and ability to \
+		survive and explore inhospitable plasma-rich worlds."
 
 
 /datum/species/plasmaman/create_pref_unique_perks()

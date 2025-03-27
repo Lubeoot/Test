@@ -63,8 +63,22 @@
 	randomize_external_organs(human_mob)
 
 /datum/species/moth/get_species_description()
-	return "Hailing from a planet that was lost long ago, the moths travel \
-		the galaxy as a nomadic people aboard a colossal fleet of ships, seeking a new homeland."
+	return "Abomination against Man, and if he still believed, his God too. \
+		A genetic project by Nanotrasen designed to colonize a series of cold \
+		and mountainous tundra/ice planets rich in minerals and experimental \
+		resources deemed unfit for automated extraction. This entire operation \
+		was ruined when the system was conquered by a joint-effort between \
+		The Gorlex Marauders and Cybersun Industries, who are rumored \
+		to endlessly pump out experimental blueprints and pratical prototypes \
+		to their forces and any organization on terms with the two. \
+		Lacking the power to reclaim the system, but not lacking countless \
+		Mothmen, Nanotrasen sent the unfeeling, soulless creatures to their stations, \
+		capable of working in the depressive conditions of space stations \
+		without falling to any moral, stress, ethical or mental issue for their \
+		entire lives, which may be shorter than expected due to unforeseen mishaps. \
+		The SEF commends them as the next step in Human Evolution and a perfect \
+		inhabitant of the planned Smart Stations for their acceptance of living \
+		in the pod and being ha- feeling nothing."
 
 /datum/species/moth/create_pref_unique_perks()
 	var/list/to_add = list()

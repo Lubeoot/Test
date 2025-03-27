@@ -19,7 +19,17 @@
 
 /datum/species/human/get_species_description()
 	return "Humans are the dominant species in the known galaxy. \
-		Their kind extend from old Earth to the edges of known space."
+		Their kind extend from Earth to the edges of known space. \
+		any system of importance, or at all, really, holds them \
+		regardless of the makeup of said system. Controlled by \
+		a collection of Space-Governments, Planet-Polities, \
+		Mega-Corporations, and more often that not, a mix of two. \
+		Space-Nopes confirms that whatever lies beyond the bounds \
+		of humanity is simply more SNCA (Stuff Nanotrasen Cares About) \
+		comprising of primitive aliens and shiny rocks that humanity \
+		will soon put to use, any claims other wise are the words of \
+		insane conspiracy theorists and independent investigation \
+		is prohibited."
 
 /datum/species/human/create_pref_unique_perks()
 	var/list/to_add = list()

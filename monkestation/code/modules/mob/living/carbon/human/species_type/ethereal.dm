@@ -218,9 +218,21 @@
 	return
 
 /datum/species/ethereal/get_species_description()
-	return "Coming from the planet of Sprout, the theocratic ethereals are \
-		separated socially by caste, and espouse a dogma of aiding the weak and \
-		downtrodden."
+	return "Originating in the planet of Sprout, the theocratic ethereals are \
+		separated socially by caste, and by sects of a religion that unified \
+		the species prior to their limited colonization and space industrilization \
+		of their home system, which was followed by an invasion from the fleets of \
+		Earth and soon after purchase of the system by Nanotrasen Incorporated \
+		in the year 2560, whom reguarly sends death-squads around the system \
+		to enforce quotas, quell unrest, and inspect suspected elements. \
+		Radical sects - or perhaps those willing to stand up for their species \
+		reside in untraceable and/or unreachable space structures in their home system \
+		hidden by/in dense astroid belts, sending the tools and men of war to like-minded \
+		groups on Sprout and it's moons, it is not uncommon Ethereal's allowed to \
+		work in Nanotrasen stations for their specie's technological level \
+		and familarity with space, turn out to be connected to these groups, \
+		The Syndicate, or both, ready to bring the holy war to The Beast \
+		and its staff, none are innocent."
 
 /datum/species/ethereal/create_pref_unique_perks()
 	var/list/to_add = list()

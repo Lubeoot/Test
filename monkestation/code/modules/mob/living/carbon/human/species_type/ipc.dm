@@ -87,7 +87,14 @@
 
 /datum/species/ipc/get_species_description()
 	return "Integrated Positronic Chassis - or IPC for short - \
-	 are a race of sentient and unbound humanoid robots."
+	 is an umbrella term for man-made bodies capable of interfacing \
+	 with a positronic brain that can take control of the body. \
+	 Capable of having nearly any origin, and in the modern century \
+	 a spectrum of sentience, despite this wide classification, the \
+	 most known example is a man from 2030's Earth who was brought back \
+	 after his cause of death was deemed unjust, completing important \
+	 missions in order to keep his chemical reactor powered. \
+	 This is not an actual example of an IPC."
 
 /datum/species/ipc/random_name(gender, unique, lastname, attempts)
 	. = "[pick(GLOB.posibrain_names)]-[rand(100, 999)]"
