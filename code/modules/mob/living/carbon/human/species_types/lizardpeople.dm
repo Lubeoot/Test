@@ -74,10 +74,21 @@
 	randomize_external_organs(human_mob)
 
 /datum/species/lizard/get_species_description()
-	return "The militaristic Lizardpeople hail originally from Tizira, but have grown \
-		throughout their centuries in the stars to possess a large spacefaring \
-		empire: though now they must contend with their younger, more \
-		technologically advanced Human neighbours."
+	return "The Lizardpeople hail from Tizira, a planet consisting of several \
+	Medieval Kingdoms, and despite their lack of technological process, also hail \
+		from nearly every other planet in Tizira's system, and in surrounding systems too. \
+		Conspiracy-Nutjobs on your PDA claim that inital expedetions by Nanotrasen \
+		to the system revealed identical ships on the surfaces of these planets \
+		and similar pre-civilization drawings of plant-people who lived in the pod \
+		and were happy, but thats stupid and was debunked by Space-Nopes. \
+		These planets are kept in a weird contrast by Nanotrasen, where no \
+		efforts to introduce technology or a formal authority are made, \
+		yet the existence of Nanotrasen and Employment opportunities is made \
+		widespread knowledge. Lizards who end up on Nanotrasen stations \
+		in one way or another are often locked to incredibly simple jobs \
+		replacing unskilled laborers and cyborgs where they would be cheaper, \
+		despite this, lizards are capable of being taught new tricks, and \
+		rarely serve in more complex jobs or as assistants to command staff."
 
 // Override for the default temperature perks, so we can give our specific "cold blooded" perk.
 /datum/species/lizard/create_pref_temperature_perks()
