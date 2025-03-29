@@ -1,7 +1,7 @@
 #define NAME_TAG_WIDTH (world.icon_size * 5)
 
 /datum/keybinding/mob/show_names
-	hotkey_keys = list("Ctrl")
+	hotkey_keys = list("Shift")
 	name = "show_names"
 	full_name = "Show Names"
 	description = "Lets you see peoples names."

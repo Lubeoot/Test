@@ -1,5 +1,5 @@
 /datum/keybinding/living/sprint
-	hotkey_keys = list("Shift")
+	hotkey_keys = list("Ctrl")
 	name = "Sprint"
 	full_name = "Sprint"
 	description = "Move fast at the cost of stamina"
