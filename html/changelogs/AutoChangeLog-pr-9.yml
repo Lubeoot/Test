@@ -1,0 +1,4 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - qol: "Changed Sprint key to Ctrl, Examine names to Shift, Rest to Shift R and set screentips to be disabled."
