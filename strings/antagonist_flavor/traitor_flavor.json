@@ -1,28 +1,4 @@
 {
-    "Animal Rights Consortium": {
-        "allies": "You may cooperate with other syndicate operatives if they support our cause. Maybe you can convince the Bee Liberation Front operatives to cooperate for once?",
-        "goal": "The creatures of this world must be freed from the iron grasp of Nanotrasen, and you are their only hope!",
-        "introduction": "You are the ARC Terrorist.",
-        "roundend_report": "was an activist from the Animal Rights Consortium.",
-        "ui_theme": "syndicate",
-        "uplink": "The Syndicate have graciously given one of their uplinks for your task."
-    },
-    "Bee Liberation Front": {
-        "allies": "You may cooperate with other syndicate operatives if they support our cause. Maybe you can recruit an Animal Rights Consort to be useful for once?",
-        "goal": "We must prove ourselves to the Syndicate or we will not be able to join. Animal Rights Consort will roll us!",
-        "introduction": "You are the Bee Liberation Front Operative.",
-        "roundend_report": "was an activist of the Bee Liberation Front.",
-        "ui_theme": "syndicate",
-        "uplink": "The Syndicate have graciously given one of their uplinks to see if we are worthy."
-    },
-    "Champions of Evil": {
-        "allies": "Anyone who sees as you see, feels as you feel, may join the Champions of Evil! That means the Syndicate, the self-serving, or even the insane, as long as it has a heart of darkness, it's cool with the Champions!",
-        "goal": "You've got some napkin-note-plans for some EVIL to do today. On the side, the Champions of Evil are always looking for more morally malodorous malefactors! Get some recruiting done!",
-        "introduction": "You are the Champion of Evil.",
-        "roundend_report": "was a Champion of Evil!",
-        "ui_theme": "neutral",
-        "uplink": "The Champions of Evil is well connected to the black market. Your uplink has been provided for utmost evil!"
-    },
     "Corporate Climber": {
         "allies": "Death to the Syndicate.",
         "goal": "Killing needlessly would make you some kind of traitor, or at least definitely seen as one. This is all just a means to an end.",
@@ -54,6 +30,14 @@
         "roundend_report": "simply went completely postal!",
         "ui_theme": "neutral",
         "uplink": "You've actually managed to steal a full uplink a month ago. This should certainly help accomplish your goals."
+    },
+	"Infiltraitor": {
+        "allies": "Anyone who shares your goal, be careful of who you trust.",
+        "goal": "Years of blending in has given you an important position in the soysphere and on one of their space stations, deliver a killing blow before your cover is blown. ",
+        "introduction": "You are the Infiltrator!.",
+        "roundend_report": "was a rogue agent inside the staff team!",
+        "ui_theme": "neutral",
+        "uplink": "Nanotrasen doesn't see you for your true colors and you can manage to steal some equipment."
     },
     "Gorlex Marauders": {
         "allies": "You may collaborate with any friends of the Syndicate coalition, but keep an eye on any of those Tiger punks if they do show up.",
@@ -87,6 +71,14 @@
         "ui_theme": "syndicate",
         "uplink": "You have been provided with a standard uplink to accomplish your task."
     },
+	"Sprout Liberation Movement": {
+        "allies": "Syndicate Agents are untrustworthy but may be willing to work together to destroy a common enemy, rarely out of moral obligation. The Beast's venom strikes deep and some ethereals may be agaisnt the good work you are doing.",
+        "goal": "The crimes of Nanotrasen must be retaliated agaisnt, take sure nobody will forget today and remember that none are innocent.",
+        "introduction": "You are a Ethereal-Funded Terrorist.",
+        "roundend_report": "was a terrorist funded by radical ethereal sects.",
+        "ui_theme": "neutral",
+        "uplink": "In-system contacts have arranged for the transport and smuggling of contraband."
+    },
     "Tiger Cooperative Fanatic": {
         "allies": "Only the enlightened Tiger brethren can be trusted; all others must be expelled from this mortal realm!",
         "goal": "Remember the teachings of Hy-lurgixon; kill first, ask questions later!",
@@ -119,5 +111,13 @@
         "roundend_report": "was a Member of The Ashen Forge.",
         "ui_theme": "syndicate",
         "uplink": "You have been provided with a standard uplink to accomplish your task."
+    },
+	"The Frog Front": {
+        "allies": "You may cooperate with like-minded intellectuals to get this station shut down.",
+        "goal": "KEEEEEK! Nuspesscacas really think their stations are better than our ponds? Show them the meaning of Demoralizer and prove their off-site claims correct!",
+        "introduction": "You are the FrogBVLL.",
+        "roundend_report": "thought it was time to shut down the site.",
+        "ui_theme": "neutral",
+        "uplink": "KEEEEK! Nusoicacas don't know how to get an uplink!"
     }
 }
