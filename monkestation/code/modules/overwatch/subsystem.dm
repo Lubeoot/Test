@@ -5,13 +5,13 @@ SUBSYSTEM_DEF(overwatch)
 
 	var/max_error_count = 4
 
-	var/is_active = FALSE
+	var/is_active = TRUE
 	var/error_counter = 0
 
 	///accounts younger than this in days are interviewed
-	var/minimum_player_age = 7
+	var/minimum_player_age = 0
 	///max number of active non role bans to be considered for interview
-	var/max_ban_count = 2
+	var/max_ban_count = 10
 
 	var/list/tgui_panel_asn_data = list()
 	var/list/tgui_panel_wl_data = list()
