@@ -1,0 +1,7 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - rscadd: "Added new soysphere name strings"
+  - rscadd: "Added new soysphere traitor fluff panels"
+  - rscdel: "Removed old name strings"
+  - rscdel: "Removed old traitor fluff panels"
