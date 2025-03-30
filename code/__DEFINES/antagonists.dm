@@ -145,31 +145,31 @@
 
 ///employers that are from the syndicate
 GLOBAL_LIST_INIT(syndicate_employers, list(
-	"Animal Rights Consortium",
-	"Bee Liberation Front",
 	"Cybersun Industries",
 	"Donk Corporation",
 	"Gorlex Marauders",
 	"MI13",
+	"Sprout Liberation Movement",
+	"The Ashen Forge Member",
+	"The Frog Front",
 	"Tiger Cooperative Fanatic",
 	"Waffle Corporation Terrorist",
 	"Waffle Corporation",
-	"The Ashen Forge Member",
 ))
 ///employers that are from nanotrasen
 GLOBAL_LIST_INIT(nanotrasen_employers, list(
-	"Champions of Evil",
 	"Corporate Climber",
 	"Gone Postal",
+	"Infiltraitor",
 	"Internal Affairs Agent",
 	"Legal Trouble",
 ))
 
 ///employers who hire agents to do the hijack
 GLOBAL_LIST_INIT(hijack_employers, list(
-	"Animal Rights Consortium",
-	"Bee Liberation Front",
 	"Gone Postal",
+	"Sprout Liberation Movement",
+	"The Frog Front",
 	"Tiger Cooperative Fanatic",
 	"Waffle Corporation Terrorist",
 ))
@@ -267,9 +267,9 @@ GLOBAL_LIST_INIT(human_invader_antagonists, list(
 // Progression traitor defines
 
 /// Chance that the traitor could roll hijack if the pop limit is met.
-#define HIJACK_PROB 10
+#define HIJACK_PROB 20
 /// Hijack is unavailable as a random objective below this player count.
-#define HIJACK_MIN_PLAYERS 30
+#define HIJACK_MIN_PLAYERS 1
 
 /// Chance the traitor gets a martyr objective instead of having to escape alive, as long as all the objectives are martyr compatible.
 #define MARTYR_PROB 20
