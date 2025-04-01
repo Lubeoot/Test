@@ -1,0 +1,5 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - rscadd: "Added some lobby screens"
+  - rscadd: "Added some lobby music"
