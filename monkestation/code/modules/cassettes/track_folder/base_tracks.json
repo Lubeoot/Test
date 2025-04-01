@@ -5,9 +5,39 @@
 	"duration": 1500,
 	"artist": "X-CEED",
 	"secret": false,
-	"lobby": false,
+	"lobby": true,
 	"jukebox": true,
 	"genre": "Jazz"
+	},
+	{
+	"url": "https://files.catbox.moe/q0vvr3.m4a",
+	"title": "Endless Space",
+	"duration": 2140,
+	"artist": "Solus",
+	"secret": false,
+	"lobby": true,
+	"jukebox": true,
+	"genre": "Electronic"
+	},
+	{
+	"url": "https://files.catbox.moe/q0vvr3.m4a",
+	"title": "Gem Cobbity",
+	"duration": 3190,
+	"artist": "David Thoughie",
+	"secret": false,
+	"lobby": true,
+	"jukebox": true,
+	"genre": "Electronic"
+	},
+	{
+	"url": "https://files.catbox.moe/l7r58w.m4a",
+	"title": "Cobman",
+	"duration": 2570,
+	"artist": "David Thoughie",
+	"secret": false,
+	"lobby": true,
+	"jukebox": true,
+	"genre": "Electronic"
 	},
 	{
 	"url": "https://files.catbox.moe/b24m07.mp3",
@@ -55,7 +85,7 @@
 	"duration": 3150,
 	"artist": "Leslie Fish",
 	"secret": false,
-	"lobby": false,
+	"lobby": true,
 	"jukebox": true,
 	"genre": "Folk and Indie"
 	},
@@ -1025,7 +1055,7 @@
 	"duration": 2340,
 	"artist": "Chris Remo",
 	"secret": false,
-	"lobby": false,
+	"lobby": true,
 	"jukebox": true,
 	"genre": "Folk and Indie"
 	},
@@ -3780,7 +3810,7 @@
 	"artist": "Madducks",
 	"genre": "Electronic",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
@@ -3790,7 +3820,7 @@
 	"artist": "T87-Sulfurhead",
 	"genre": "Electronic",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
@@ -3800,7 +3830,7 @@
 	"artist": "T87-Sulfurhead",
 	"genre": "Electronic",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
@@ -3810,7 +3840,7 @@
 	"artist": "T87-Sulfurhead",
 	"genre": "Electronic",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
@@ -3820,7 +3850,7 @@
 	"artist": "Chronoquest",
 	"genre": "Electronic",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
@@ -3830,7 +3860,7 @@
 	"artist": "Terrible Tim",
 	"genre": "Folk and Indie",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
@@ -3840,7 +3870,7 @@
 	"artist": "Bizaonacci",
 	"genre": "Folk and Indie",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
@@ -3850,7 +3880,7 @@
 	"artist": "LISA:The Pointless",
 	"genre": "Electronic",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
@@ -3860,7 +3890,7 @@
 	"artist": "Skyline",
 	"genre": "Electronic",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true
 	},
 	{
