@@ -178,16 +178,16 @@
 	worn_icon = 'monkestation/code/modules/blueshift/icons/mob/clothing/accessories.dmi'
 
 GLOBAL_LIST_INIT(pride_pin_reskins, list(
-	"Rainbow Pride" = "pride",
-	"Bisexual Pride" = "pride_bi",
-	"Pansexual Pride" = "pride_pan",
-	"Asexual Pride" = "pride_ace",
-	"Non-binary Pride" = "pride_enby",
-	"Transgender Pride" = "pride_trans",
-	"Intersex Pride" = "pride_intersex",
-	"Lesbian Pride" = "pride_lesbian",
-	"Gay Pride" = "pride_mlm",
-	"Genderfluid Pride" = "pride_genderfluid",
-	"Genderqueer Pride" = "pride_genderqueer",
-	"Aromantic Pride" = "pride_aromantic",
+	"Award" = "default_award",
+	"SPVA Immigrant Award" = "red_award",
+	"Frootist Award" = "frootist_award",
+	"Dollist Award" = "dollist_award",
+	"Sootist Award" = "sootist_award",
+	"Gem Award" = "gem_award",
+	"Rootist Award" = "rootist_award",
+	"Coal Award" = "coal_award",
+	"Brap Award" = "brap_award",
+	"Discord Award" = "discord_award",
+	"Bapepe Award" = "bapepe_award",
+	"Kuzist Award" = "kuzist_award",
 ))

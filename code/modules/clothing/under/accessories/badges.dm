@@ -185,8 +185,8 @@ GLOBAL_LIST_INIT(pride_pin_reskins, list(
 */
 
 /obj/item/clothing/accessory/pride
-	name = "pride pin"
-	desc = "A Nanotrasen Diversity & Inclusion Center-sponsored holographic pin to show off your pride, reminding the crew of their unwavering commitment to equity, diversity, and inclusion!"
+	name = "Award"
+	desc = "An award worn by an entity befitting its description, they could represent anything and be worn for any reason, often being worn as a status symbol of pride or manifested as a warning in relation to whatever the award states its for."
 	icon_state = "pride"
 	obj_flags = UNIQUE_RENAME
 	infinite_reskin = TRUE
