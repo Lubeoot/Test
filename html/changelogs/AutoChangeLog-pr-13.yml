@@ -1,0 +1,5 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - rscadd: "Adds awards to the game, you can alt click them to change their color and switch from presets and use a pen on them to give them a custom name or description."
+  - bugfix: "Gem Cobbity actually goes to the correct catbox file now"
