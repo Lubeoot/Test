@@ -1,13 +1,13 @@
 /datum/quirk/item_quirk/pride_pin
-	name = "Pride Pin"
-	desc = "Show off your pride with this changing pride pin!"
+	name = "Award Wearer"
+	desc = "Start off with an Award, for one reason or another. You can Alt-Click it to change its color and use a pen on it to give it a custom name and description!"
 	icon = FA_ICON_RAINBOW
 	value = 0
 	//MONKESTATION EDIT START
 	mob_trait = TRAIT_PRIDE_PIN
 	quirk_flags = QUIRK_CHANGES_APPEARANCE
-	gain_text = span_notice("You feel proud to be queer.")
-	lose_text = span_danger("You decide to repress your feelings.")
+	gain_text = span_notice("You now wear an award, for one reason or another.")
+	lose_text = span_danger("You can feel your very existence becoming less slop-like.")
 	//MONKESTATION EDIT END
 
 /datum/quirk/item_quirk/pride_pin/add_unique(client/client_source)
