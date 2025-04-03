@@ -1,0 +1,6 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - rscdel: "Removed Monkey Portal Storm, it was very weighted and griffed new players o algo"
+  - qol: "Awards now properly appear as they should as a typepath"
+  - bugfix: "fixed the lobby music for gem cobbity and removes Cobman because I forget to check it for being compliant."
