@@ -172,12 +172,12 @@
 	if(green_time_remaining > 0)
 		. += span_nicegreen("It reads '[green_time_remaining] hour[green_time_remaining >= 2 ? "s" : ""].'")
 
-// Pride Pin Over-ride
-/obj/item/clothing/accessory/pride
+// Award Pin Over-ride
+/obj/item/clothing/accessory/award
 	icon = 'monkestation/code/modules/blueshift/icons/obj/clothing/accessories.dmi'
 	worn_icon = 'monkestation/code/modules/blueshift/icons/mob/clothing/accessories.dmi'
 
-GLOBAL_LIST_INIT(pride_pin_reskins, list(
+GLOBAL_LIST_INIT(award_pin_reskins, list(
 	"Award" = "default_award",
 	"SPVA Immigrant Award" = "red_award",
 	"Frootist Award" = "frootist_award",

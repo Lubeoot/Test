@@ -59,7 +59,7 @@
 		/datum/quirk/item_quirk/family_heirloom,
 		/datum/quirk/item_quirk/nearsighted,
 		/datum/quirk/item_quirk/photographer,
-		/datum/quirk/item_quirk/pride_pin,
+		/datum/quirk/item_quirk/award,
 		/datum/quirk/item_quirk/bald,
 		/datum/quirk/item_quirk/clown_enjoyer,
 		/datum/quirk/item_quirk/mime_fan,

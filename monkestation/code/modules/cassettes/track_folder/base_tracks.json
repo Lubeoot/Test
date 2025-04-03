@@ -20,19 +20,9 @@
 	"genre": "Electronic"
 	},
 	{
-	"url": "https://files.catbox.moe/q0vvr3.m4a",
+	"url": "https://files.catbox.moe/hortmp.m4a",
 	"title": "Gem Cobbity",
 	"duration": 3190,
-	"artist": "David Thoughie",
-	"secret": false,
-	"lobby": true,
-	"jukebox": true,
-	"genre": "Electronic"
-	},
-	{
-	"url": "https://files.catbox.moe/l7r58w.m4a",
-	"title": "Cobman",
-	"duration": 2570,
 	"artist": "David Thoughie",
 	"secret": false,
 	"lobby": true,
@@ -85,7 +75,7 @@
 	"duration": 3150,
 	"artist": "Leslie Fish",
 	"secret": false,
-	"lobby": true,
+	"lobby": false,
 	"jukebox": true,
 	"genre": "Folk and Indie"
 	},

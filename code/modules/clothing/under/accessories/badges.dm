@@ -184,28 +184,28 @@ GLOBAL_LIST_INIT(pride_pin_reskins, list(
 ))
 */
 
-/obj/item/clothing/accessory/pride
-	name = "Award"
+/obj/item/clothing/accessory/award
+	name = "award pin"
 	desc = "An award worn by an entity befitting its description, they could represent anything and be worn for any reason, often being worn as a status symbol of pride or manifested as a warning in relation to whatever the award states its for."
-	icon_state = "pride"
+	icon_state = "default_award"
 	obj_flags = UNIQUE_RENAME
 	infinite_reskin = TRUE
 
-/obj/item/clothing/accessory/pride/Initialize(mapload)
+/obj/item/clothing/accessory/award/Initialize(mapload)
 	. = ..()
-	unique_reskin = GLOB.pride_pin_reskins
+	unique_reskin = GLOB.award_pin_reskins
 
-/obj/item/clothing/accessory/pride/reskin_obj(mob/M)
+/obj/item/clothing/accessory/award/reskin_obj(mob/M)
 	. = ..()
 	post_reskin(M)
 
-/obj/item/clothing/accessory/pride/post_reskin(mob/our_mob)
-	for(var/pride_name as anything in GLOB.pride_pin_reskins)
-		if(GLOB.pride_pin_reskins[pride_name] == icon_state)
-			name = "[lowertext(pride_name)] pin"
+/obj/item/clothing/accessory/award/post_reskin(mob/our_mob)
+	for(var/award_name as anything in GLOB.award_pin_reskins)
+		if(GLOB.award_pin_reskins[award_name] == icon_state)
+			name = "[lowertext(award_name)] pin"
 			return
 
-	name = initial(name) // If we somehow fail to find our pride in the global list, just make us generic
+	name = initial(name) // If we somehow fail to find our award in the global list, just make us generic
 
 ///Awarded for being dutiful and extinguishing the debt from the "Indebted" quirk.
 /obj/item/clothing/accessory/debt_payer_pin
