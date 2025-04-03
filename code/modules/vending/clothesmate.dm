@@ -39,7 +39,7 @@
 			"name" = "Accessories",
 			"icon" = "glasses",
 			"products" = list(
-				/obj/item/clothing/accessory/pride = 15,
+				/obj/item/clothing/accessory/award = 50,
 				/obj/item/clothing/accessory/waistcoat = 4,
 				/obj/item/clothing/suit/toggle/suspenders = 4,
 				/obj/item/clothing/neck/tie/horrible = 3,

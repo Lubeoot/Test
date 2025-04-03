@@ -272,6 +272,3 @@
 
 /datum/round_event_control/dark_matteor
 	track = EVENT_TRACK_OBJECTIVES
-
-/datum/round_event_control/portal_storm_monkey
-	tags = list(TAG_EXTERNAL, TAG_COMMUNAL)
