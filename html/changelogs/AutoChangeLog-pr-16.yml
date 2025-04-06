@@ -1,0 +1,6 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - rscadd: "Added new sprites"
+  - rscdel: "Removed old sprites"
+  - rscadd: "Plasma Windows do not appear as plasma windows, this is a bug and my fix didn't work so I'm just balling."
