@@ -6,19 +6,19 @@ SUBSYSTEM_DEF(station_coloring)
 	///do we bother with wall trims?
 	var/wall_trims = FALSE
 	//RED (Only sec stuff honestly)
-	var/list/red = list("#d0294c", "#d6292f", "#d62f29", "#d63a29")
+	var/list/red = list("")
 	//BAR
-	var/list/bar = list("#3790aa", "#5ca9c1", "#5cb092", "#4daf9b", "#4a9bdf", "#30cedf", "#c7804a", "#b0cedf")
+	var/list/bar = list("")
 	//PURPLE (RnD + Research outpost)
-	var/list/purple = list("#674dba", "#6b43bc", "#864ec5", "#8d40c3")
+	var/list/purple = list("")
 	//BROWN (Mining + Cargo)
-	var/list/brown = list("#826627", "#825327", "#a9682b", "#a9542b")
+	var/list/brown = list("")
 	//GREEN (Virology and Hydro areas)
-	var/list/green = list("#50b47c", "#59b25d", "#46955a", "#4ba17b")
+	var/list/green = list("")
 	//BLUE (Some of Medbay areas)
-	var/list/blue = list("#336f92", "#5d99bc", "#3f87ae", "#6eabce", "#307199")
+	var/list/blue = list("")
 	//ORANGE (engineering)
-	var/list/orange = list("#f3a852", "#f39d3a", "#c47010", "#f08913", "#fc8600")
+	var/list/orange = list("")
 
 /datum/controller/subsystem/station_coloring/Initialize()
 	var/list/color_palette = list(
@@ -48,7 +48,7 @@ SUBSYSTEM_DEF(station_coloring)
 					wall.change_trim_color(color)
 
 /datum/controller/subsystem/station_coloring/proc/get_default_color()
-	var/static/default_color = pick(list("#1a356e", "#305a6d", "#164f41"))
+	var/static/default_color = pick(list(""))
 
 	return default_color
 

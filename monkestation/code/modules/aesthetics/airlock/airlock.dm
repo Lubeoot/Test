@@ -265,17 +265,17 @@
 
 //STATION AIRLOCKS
 /obj/machinery/door/airlock
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/public.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/station/public.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 
 /obj/machinery/door/airlock/command
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/command.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 
 /obj/machinery/door/airlock/security
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/security.dmi'
+	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 
 /obj/machinery/door/airlock/security/old
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/security.dmi'
+	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_sec/old
 
 /obj/machinery/door/airlock/security/old/glass
@@ -284,38 +284,38 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/engineering
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/engineering.dmi'
+	icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
 
 /obj/machinery/door/airlock/medical
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/medical.dmi'
+	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 
 /obj/machinery/door/airlock/maintenance
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/maintenance.dmi'
+	icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
 
 /obj/machinery/door/airlock/maintenance/external
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/maintenanceexternal.dmi'
+	icon = 'icons/obj/doors/airlocks/station/maintenanceexternal.dmi'
 
 /obj/machinery/door/airlock/mining
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/mining.dmi'
+	icon = 'icons/obj/doors/airlocks/station/mining.dmi'
 
 /obj/machinery/door/airlock/atmos
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/atmos.dmi'
+	icon = 'icons/obj/doors/airlocks/station/atmos.dmi'
 
 /obj/machinery/door/airlock/research
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/research.dmi'
+	icon = 'icons/obj/doors/airlocks/station/research.dmi'
 
 /obj/machinery/door/airlock/freezer
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/freezer.dmi'
+	icon = 'icons/obj/doors/airlocks/station/freezer.dmi'
 
 /obj/machinery/door/airlock/science
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/science.dmi'
+	icon = 'icons/obj/doors/airlocks/station/science.dmi'
 
 /obj/machinery/door/airlock/virology
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/virology.dmi'
+	icon = 'icons/obj/doors/airlocks/station/virology.dmi'
 
 //STATION CUSTOM ARILOCKS
 /obj/machinery/door/airlock/corporate
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/corporate.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_corporate
 	normal_integrity = 450
 
@@ -325,7 +325,7 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/service
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/service.dmi'
+	icon = 'icons/obj/doors/airlocks/station/public.dmi'
 	assemblytype = /obj/structure/door_assembly/door_assembly_service
 
 /obj/machinery/door/airlock/service/glass
@@ -333,13 +333,13 @@
 	glass = TRUE
 
 /obj/machinery/door/airlock/captain
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/cap.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 
 /obj/machinery/door/airlock/hop
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hop.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 
 /obj/machinery/door/airlock/hos
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hos.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 
 /obj/machinery/door/airlock/hos/glass
 	opacity = FALSE
@@ -347,7 +347,7 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/ce
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/ce.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 
 /obj/machinery/door/airlock/ce/glass
 	opacity = FALSE
@@ -355,7 +355,7 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/rd
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/rd.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 
 /obj/machinery/door/airlock/rd/glass
 	opacity = FALSE
@@ -363,7 +363,7 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/qm
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/qm.dmi'
+	icon = 'icons/obj/doors/airlocks/station/mining.dmi'
 
 /obj/machinery/door/airlock/qm/glass
 	opacity = FALSE
@@ -371,7 +371,7 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/cmo
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/cmo.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 
 /obj/machinery/door/airlock/cmo/glass
 	opacity = FALSE
@@ -379,13 +379,13 @@
 	normal_integrity = 400
 
 /obj/machinery/door/airlock/psych
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/psych.dmi'
+	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 
 /obj/machinery/door/airlock/asylum
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/asylum.dmi'
+	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 
 /obj/machinery/door/airlock/bathroom
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/bathroom.dmi'
+	icon = 'icons/obj/doors/airlocks/station/public.dmi'
 
 //STATION MINERAL AIRLOCKS
 /obj/machinery/door/airlock/gold
@@ -415,114 +415,113 @@
 //STATION 2 AIRLOCKS
 
 /obj/machinery/door/airlock/public
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station2/glass.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station2/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/station2/glass.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/station2/overlays.dmi'
 
 //EXTERNAL AIRLOCKS
 /obj/machinery/door/airlock/external
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/external/external.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/external/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/external/external.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/external/overlays.dmi'
 
 //CENTCOM
 /obj/machinery/door/airlock/centcom
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/centcom/centcom.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/centcom/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/centcom/overlays.dmi'
 
 /obj/machinery/door/airlock/grunge
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/centcom/centcom.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/centcom/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/centcom/overlays.dmi'
 
 //VAULT
 /obj/machinery/door/airlock/vault
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/vault/vault.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/vault/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/vault/vault.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/vault/overlays.dmi'
 
 //HATCH
 /obj/machinery/door/airlock/hatch
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/centcom.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/hatch/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
 
 /obj/machinery/door/airlock/maintenance_hatch
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/maintenance.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/hatch/maintenance.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
 
 //HIGH SEC
 /obj/machinery/door/airlock/highsecurity
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/highsec/highsec.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/highsec/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/highsec/highsec.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/highsec/overlays.dmi'
 
 //ASSEMBLYS
 /obj/structure/door_assembly/door_assembly_public
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station2/glass.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station2/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/station/public.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 
 /obj/structure/door_assembly/door_assembly_com
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/command.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 
 /obj/structure/door_assembly/door_assembly_sec
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/security.dmi'
+	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 
 /obj/structure/door_assembly/door_assembly_sec/old
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/security2.dmi'
+	icon = 'icons/obj/doors/airlocks/station/security.dmi'
 
 /obj/structure/door_assembly/door_assembly_eng
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/engineering.dmi'
+	icon = 'icons/obj/doors/airlocks/station/engineering.dmi'
 
 /obj/structure/door_assembly/door_assembly_min
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/mining.dmi'
+	icon = 'icons/obj/doors/airlocks/station/mining.dmi'
 
 /obj/structure/door_assembly/door_assembly_atmo
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/atmos.dmi'
+	icon = 'icons/obj/doors/airlocks/station/atmos.dmi'
 
 /obj/structure/door_assembly/door_assembly_research
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/research.dmi'
+	icon = 'icons/obj/doors/airlocks/station/research.dmi'
 
 /obj/structure/door_assembly/door_assembly_science
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/science.dmi'
+	icon = 'icons/obj/doors/airlocks/station/science.dmi'
 
 /obj/structure/door_assembly/door_assembly_viro
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/virology.dmi'
+	icon = 'icons/obj/doors/airlocks/station/virology.dmi'
 
 /obj/structure/door_assembly/door_assembly_med
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/medical.dmi'
+	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 
 /obj/structure/door_assembly/door_assembly_mai
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/maintenance.dmi'
+	icon = 'icons/obj/doors/airlocks/station/maintenance.dmi'
 
 /obj/structure/door_assembly/door_assembly_extmai
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/maintenanceexternal.dmi'
+	icon = 'icons/obj/doors/airlocks/station/maintenanceexternal.dmi'
 
 /obj/structure/door_assembly/door_assembly_ext
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/external/external.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/external/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/external/external.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/external/overlays.dmi'
 
 /obj/structure/door_assembly/door_assembly_fre
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/freezer.dmi'
+	icon = 'icons/obj/doors/airlocks/station/freezer.dmi'
 
 /obj/structure/door_assembly/door_assembly_hatch
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/centcom.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/hatch/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
 
 /obj/structure/door_assembly/door_assembly_mhatch
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/maintenance.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hatch/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/hatch/maintenance.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/hatch/overlays.dmi'
 
 /obj/structure/door_assembly/door_assembly_highsecurity
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/highsec/highsec.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/highsec/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/highsec/highsec.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/highsec/overlays.dmi'
 
 /obj/structure/door_assembly/door_assembly_vault
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/vault/vault.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/vault/overlays.dmi'
-
+	icon = 'icons/obj/doors/airlocks/vault/vault.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/vault/overlays.dmi'
 
 /obj/structure/door_assembly/door_assembly_centcom
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/centcom/centcom.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/centcom/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/centcom/overlays.dmi'
 
 /obj/structure/door_assembly/door_assembly_grunge
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/centcom/centcom.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/centcom/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/centcom/overlays.dmi'
 
 /obj/structure/door_assembly/door_assembly_gold
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/gold.dmi'
@@ -550,80 +549,80 @@
 
 /obj/structure/door_assembly/door_assembly_corporate
 	name = "corporate airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/corporate.dmi'
-	glass_type = /obj/machinery/door/airlock/corporate/glass
-	airlock_type = /obj/machinery/door/airlock/corporate
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
+	glass_type = /obj/machinery/door/airlock/command/glass
+	airlock_type = /obj/machinery/door/airlock/command
 
 /obj/structure/door_assembly/door_assembly_service
 	name = "service airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/service.dmi'
+	icon = 'icons/obj/doors/airlocks/station/public.dmi'
 	base_name = "service airlock"
 	glass_type = /obj/machinery/door/airlock/service/glass
 	airlock_type = /obj/machinery/door/airlock/service
 
 /obj/structure/door_assembly/door_assembly_captain
 	name = "captain airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/cap.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	glass_type = /obj/machinery/door/airlock/command/glass
-	airlock_type = /obj/machinery/door/airlock/captain
+	airlock_type = /obj/machinery/door/airlock/command
 
 /obj/structure/door_assembly/door_assembly_hop
 	name = "head of personnel airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hop.dmi'
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
 	glass_type = /obj/machinery/door/airlock/command/glass
-	airlock_type = /obj/machinery/door/airlock/hop
+	airlock_type = /obj/machinery/door/airlock/command
 
 /obj/structure/door_assembly/hos
 	name = "head of security airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/hos.dmi'
-	glass_type = /obj/machinery/door/airlock/hos/glass
-	airlock_type = /obj/machinery/door/airlock/hos
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
+	glass_type = /obj/machinery/door/airlock/command/glass
+	airlock_type = /obj/machinery/door/airlock/command
 
 /obj/structure/door_assembly/door_assembly_cmo
 	name = "chief medical officer airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/cmo.dmi'
-	glass_type = /obj/machinery/door/airlock/cmo/glass
-	airlock_type = /obj/machinery/door/airlock/cmo
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
+	glass_type = /obj/machinery/door/airlock/command/glass
+	airlock_type = /obj/machinery/door/airlock/command
 
 /obj/structure/door_assembly/door_assembly_ce
 	name = "chief engineer airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/ce.dmi'
-	glass_type = /obj/machinery/door/airlock/ce/glass
-	airlock_type = /obj/machinery/door/airlock/ce
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
+	glass_type = /obj/machinery/door/airlock/command/glass
+	airlock_type = /obj/machinery/door/airlock/command
 
 /obj/structure/door_assembly/door_assembly_rd
 	name = "research director airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/rd.dmi'
-	glass_type = /obj/machinery/door/airlock/rd/glass
-	airlock_type = /obj/machinery/door/airlock/rd
+	icon = 'icons/obj/doors/airlocks/station/command.dmi'
+	glass_type = /obj/machinery/door/airlock/command/glass
+	airlock_type = /obj/machinery/door/airlock/command
 
 /obj/structure/door_assembly/door_assembly_qm
 	name = "quartermaster airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/qm.dmi'
-	glass_type = /obj/machinery/door/airlock/qm/glass
-	airlock_type = /obj/machinery/door/airlock/qm
+	icon = 'icons/obj/doors/airlocks/station/mining.dmi'
+	glass_type = /obj/machinery/door/airlock/mining/glass
+	airlock_type = /obj/machinery/door/airlock/mining
 
 /obj/structure/door_assembly/door_assembly_psych
 	name = "psychologist airlock assembly"
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/psych.dmi'
+	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 	glass_type = /obj/machinery/door/airlock/medical/glass
-	airlock_type = /obj/machinery/door/airlock/psych
+	airlock_type = /obj/machinery/door/airlock/medical
 
 /obj/structure/door_assembly/door_assembly_asylum
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/asylum.dmi'
+	icon = 'icons/obj/doors/airlocks/station/medical.dmi'
 
 /obj/structure/door_assembly/door_assembly_bathroom
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/bathroom.dmi'
+	icon = 'icons/obj/doors/airlocks/station/public.dmi'
 
 /obj/machinery/door/airlock/hydroponics
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/botany.dmi'
+	icon = 'icons/obj/doors/airlocks/station/hydroponics.dmi'
 
 /obj/structure/door_assembly/door_assembly_hydro
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/botany.dmi'
+	icon = 'icons/obj/doors/airlocks/station/hydroponics.dmi'
 
 /obj/structure/door_assembly
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/public.dmi'
-	overlays_file = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/overlays.dmi'
+	icon = 'icons/obj/doors/airlocks/station/public.dmi'
+	overlays_file = 'icons/obj/doors/airlocks/station/overlays.dmi'
 
 /obj/machinery/door/poddoor/shutters
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/shutters.dmi'
