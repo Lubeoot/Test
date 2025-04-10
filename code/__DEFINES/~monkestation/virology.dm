@@ -39,7 +39,7 @@
 #define DISEASE_XENO "xeno"
 #define DISEASE_CORGI "corgi"
 #define DISEASE_SLIME "slime"
-#define DISEASE_MORPH "morph"
+#define DISEASE_CADO "cado"
 #define DISEASE_ROBOT "robot"
 #define DISEASE_COLD "cold"
 #define DISEASE_HEART "heart"

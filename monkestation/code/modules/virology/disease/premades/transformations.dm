@@ -90,14 +90,14 @@
 	if(mob.has_reagent(/datum/reagent/water, 1)) //Water is effective against slimes
 		cure()
 
-/datum/disease/acute/premade/morph
+/datum/disease/acute/premade/cado
 	name = "Gluttony"
 	form = "Hungering Cells"
 	origin = "The Hivemind"
-	category = DISEASE_MORPH
+	category = DISEASE_CADO
 
 	symptoms = list(
-		new /datum/symptom/transformation/morph
+		new /datum/symptom/transformation/cado
 	)
 	spread_flags = DISEASE_SPREAD_BLOOD
 	robustness = 75
@@ -106,7 +106,7 @@
 	infectionchance_base = 0
 	stage_variance = 0
 
-/datum/disease/acute/premade/morph/activate(mob/living/mob, starved, seconds_per_tick)
+/datum/disease/acute/premade/cado/activate(mob/living/mob, starved, seconds_per_tick)
 	. = ..()
 	if(mob.has_reagent(/datum/reagent/toxin/lipolicide, 1)) //Empties the hunger
 		cure()
