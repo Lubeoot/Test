@@ -960,7 +960,7 @@
 /datum/reagent/gluttonytoxin/expose_mob(mob/living/exposed_mob, methods=TOUCH, reac_volume, show_message=TRUE, touch_protection=0)
 	. = ..()
 	if(reac_volume >= 1)//This prevents microdosing from infecting masses of people
-		exposed_mob.infect_disease_predefined(DISEASE_MORPH, TRUE, "[ROUND_TIME()] Gluttony Toxin Infections [key_name(exposed_mob)]")
+		exposed_mob.infect_disease_predefined(DISEASE_CADO, TRUE, "[ROUND_TIME()] Gluttony Toxin Infections [key_name(exposed_mob)]")
 
 /datum/reagent/serotrotium
 	name = "Serotrotium"

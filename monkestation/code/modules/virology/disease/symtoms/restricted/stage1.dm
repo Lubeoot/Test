@@ -94,11 +94,11 @@
 	new_form = /mob/living/basic/pet/dog/corgi
 	desc = "Restructures the subject cells into a corgi. Cure: Coco Powder"
 
-/datum/symptom/transformation/morph
+/datum/symptom/transformation/cado
 	name = "Gluttony's Blessing"
-	new_form = /mob/living/basic/morph
-	transformed_antag_datum = /datum/antagonist/morph
-	desc = "Restructures the subject cells into a morph. Cure: Lipolicide"
+	new_form = /mob/living/basic/cado
+	transformed_antag_datum = /datum/antagonist/cado
+	desc = "Restructures the subject cells into a cado. Cure: Lipolicide"
 
 /datum/symptom/transformation/gondola
 	name = "Gondola Transformation"

@@ -13,15 +13,15 @@ const noticestyle = {
   color: 'lightblue',
 };
 
-export const AntagInfoMorph = (props) => {
+export const AntagInfoCado = (props) => {
   return (
-    <Window width={620} height={170} theme="abductor">
+    <Window width={620} height={270} theme="abductor">
       <Window.Content>
         <Stack vertical fill>
-          <Stack.Item fontSize="25px">You are a morph...</Stack.Item>
+          <Stack.Item fontSize="25px">You are Cado...</Stack.Item>
           <Stack.Item>
             <BlockQuote>
-              ...a shapeshifting abomination that can eat almost anything. You
+              ...a galatic famous mukbanger that can eat almost anything. You
               may take the form of anything you can see by{' '}
               <span style={noticestyle}>
                 using your &quot;Assume Form&quot; ability on it. Shift-clicking
@@ -30,18 +30,18 @@ export const AntagInfoMorph = (props) => {
               <span style={badstyle}>
                 &ensp;This process will alert any nearby observers.
               </span>{' '}
-              While morphed, you move faster, but are unable to attack creatures
-              or eat anything. In addition,
+              While disguised, you move faster, but are unable to attack creatures
+              or eat anything due to your strict honor code. In addition,
               <span style={badstyle}>
-                &ensp;anyone within three tiles will note an uncanny wrongness
-                if examining you.
+                &ensp;anyone within three tiles examining you will realize
+                you are two steps ahead.
               </span>{' '}
-              You can attack any item or dead creature to consume it -
+              You can attack any item or dead creature to mukbang it -
               <span style={goodstyle}>
                 &ensp;corpses will restore your health.
               </span>{' '}
               Finally, you can restore yourself to your original form while
-              morphed by{' '}
+              disguised by{' '}
               <span style={noticestyle}>
                 using the &quot;Assume Form&quot; ability on yourself. You can
                 also shift-click yourself.
