@@ -1,0 +1,4 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - bugfix: "Security officers now spawn with helmets and armor instead of cowboy stuff"
