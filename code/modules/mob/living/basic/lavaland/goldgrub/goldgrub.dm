@@ -2,14 +2,12 @@
 /mob/living/basic/mining/goldgrub
 	name = "goldgrub"
 	desc = "A worm that grows fat from eating everything in its sight. Seems to enjoy precious metals and other shiny things, hence the name."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "goldgrub"
 	icon_living = "goldgrub"
 	icon_dead = "goldgrub_dead"
 	icon_gib = "syndicate_gib"
 	speed = 5
-	pixel_x = -12
-	base_pixel_x = -12
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST
 	friendly_verb_continuous = "harmlessly rolls into"
 	friendly_verb_simple = "harmlessly roll into"

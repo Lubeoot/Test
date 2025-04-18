@@ -199,7 +199,7 @@
 	duration = 10
 
 /obj/effect/temp_visual/dragon_flight
-	icon = 'icons/mob/simple/lavaland/96x96megafauna.dmi'
+	icon = 'icons/mob/simple/lavaland/64x64megafauna.dmi'
 	icon_state = "dragon"
 	layer = ABOVE_ALL_MOB_LAYER
 	plane = GAME_PLANE_UPPER_FOV_HIDDEN
@@ -217,7 +217,7 @@
 	else
 		animate(src, pixel_x = SWOOP_HEIGHT*0.1, pixel_z = SWOOP_HEIGHT*0.15, time = 3, easing = BOUNCE_EASING)
 	sleep(0.3 SECONDS)
-	icon_state = "dragon_swoop"
+	icon_state = "swoop"
 	if(negative)
 		animate(src, pixel_x = -SWOOP_HEIGHT, pixel_z = SWOOP_HEIGHT, time = 7)
 	else

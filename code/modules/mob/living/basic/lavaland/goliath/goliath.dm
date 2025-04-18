@@ -2,12 +2,10 @@
 /mob/living/basic/mining/goliath
 	name = "goliath"
 	desc = "A hulking, armor-plated beast with long tendrils arching from its back."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "goliath"
 	icon_living = "goliath"
 	icon_dead = "goliath_dead"
-	pixel_x = -12
-	base_pixel_x = -12
 	gender = MALE // Female ones are the bipedal elites
 	speed = 30
 	basic_mob_flags = IMMUNE_TO_FISTS
@@ -196,7 +194,7 @@
 /mob/living/basic/mining/goliath/ancient
 	name = "ancient goliath"
 	desc = "A massive beast that uses long tentacles to ensnare its prey, threatening them is not advised under any conditions."
-	icon = 'icons/mob/simple/lavaland/lavaland_monsters_wide.dmi'
+	icon = 'icons/mob/simple/lavaland/lavaland_monsters.dmi'
 	icon_state = "ancient_goliath"
 	icon_living = "ancient_goliath"
 	icon_dead = "ancient_goliath_dead"
