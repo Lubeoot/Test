@@ -1,0 +1,4 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - rscadd: "Gives lavaland mobs their 2020ish sprites, code is probably a mess"
