@@ -26,8 +26,6 @@
 	var/ranged_cooldown = 3 SECONDS
 	/// What kind of beams we got?
 	var/projectile_type = /obj/projectile/temp/watcher
-	/// Icon state for our eye overlay
-	var/eye_glow = "ice_glow"
 	/// Sound to play when we shoot
 	var/shoot_sound = 'sound/weapons/pierce.ogg'
 	/// Typepath of our gaze ability
@@ -45,7 +43,6 @@
 	AddElement(/datum/element/simple_flying)
 	AddElement(/datum/element/content_barfer)
 	AddComponent(/datum/component/ai_target_timer)
-	AddComponent(/datum/component/basic_ranged_ready_overlay, overlay_state = eye_glow)
 	AddComponent(\
 		/datum/component/ranged_attacks,\
 		cooldown_time = ranged_cooldown,\
@@ -64,10 +61,6 @@
 	ai_controller.set_blackboard_key(BB_GENERIC_ACTION, gaze)
 	AddComponent(/datum/component/revenge_ability, gaze, targeting = GET_TARGETING_STRATEGY(ai_controller.blackboard[BB_TARGETING_STRATEGY]))
 
-/mob/living/basic/mining/watcher/update_overlays()
-	. = ..()
-	. += emissive_appearance(icon, "watcher_emissive", src)
-
 /// I love eating diamonds yum
 /mob/living/basic/mining/watcher/proc/consume(atom/movable/thing)
 	visible_message(span_warning("[thing] seems to vanish into [src]'s body!"))
@@ -80,7 +73,6 @@
 	icon_state = "watcher_magmawing"
 	icon_living = "watcher_magmawing"
 	icon_dead = "watcher_magmawing_dead"
-	eye_glow = "fire_glow"
 	maxHealth = 175 //Compensate for the lack of slowdown on projectiles with a bit of extra health
 	health = 175
 	projectile_type = /obj/projectile/temp/watcher/magma_wing

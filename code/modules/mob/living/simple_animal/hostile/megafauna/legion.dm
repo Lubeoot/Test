@@ -69,8 +69,6 @@
 
 /mob/living/simple_animal/hostile/megafauna/legion/medium
 	icon = 'icons/mob/simple/lavaland/64x64megafauna.dmi'
-	pixel_x = -16
-	pixel_y = -8
 	maxHealth = 350
 	size = LEGION_MEDIUM
 
