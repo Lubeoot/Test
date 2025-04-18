@@ -14,8 +14,8 @@
 	mob_biotypes = MOB_BEAST
 	pass_flags = PASSTABLE
 
-	maxHealth = 150
-	health = 150
+	maxHealth = 225
+	health = 225
 	habitable_atmos = list("min_oxy" = 0, "max_oxy" = 0, "min_plas" = 0, "max_plas" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
 	bodytemp_cold_damage_limit = TCMB
 
@@ -102,7 +102,7 @@
 /// Do some more logic for the cado when we disguise through the action.
 /mob/living/basic/cado/proc/on_disguise(mob/living/basic/user, atom/movable/target)
 	SIGNAL_HANDLER
-	playsound_local(get_turf(src), 'sound/creatures/cado_disguise_sound.ogg', 75, TRUE, vary = FALSE)
+	playsound(get_turf(src), 'sound/creatures/cado_disguise_sound.ogg', 75, TRUE, vary = FALSE)
 	// We are now weaker
 	melee_damage_lower = melee_damage_disguised
 	melee_damage_upper = melee_damage_disguised
@@ -122,7 +122,7 @@
 ///Makes cado play a custom audio file when he starts to vent crawl
 /mob/living/basic/cado/move_into_vent(obj/machinery/atmospherics/components/ventcrawl_target)
 	..()
-	playsound_local(get_turf(src), 'sound/creatures/cado_ventcrawl.ogg', 75, TRUE, vary = FALSE)
+	playsound(get_turf(src), 'sound/creatures/cado_ventcrawl.ogg', 75, TRUE, vary = FALSE)
 
 /// Do some more logic for the morph when we undisguise through the action.
 /mob/living/basic/cado/proc/on_undisguise()
