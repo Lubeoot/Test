@@ -20,12 +20,10 @@
 	smooth_adapters = SMOOTH_ADAPTERS_WALLS
 
 /obj/structure/window/reinforced/plasma/fulltile
-	icon = 'icons/obj/smooth_structures/reinforced_window.dmi'
+	icon = 'icons/obj/smooth_structures/rplasma_window.dmi'
 	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE
-	base_icon_state = "reinforced_window"
-	icon_state = "reinforced_window-0"
-	glass_color_blend_to_color = "#8000ff"
-	glass_color_blend_to_ratio = 0.5
+	base_icon_state = "rplasma_window"
+	icon_state = "rplasma_window-0"
 	smooth_adapters = SMOOTH_ADAPTERS_WALLS
 
 /obj/structure/window/reinforced/fulltile
@@ -36,12 +34,10 @@
 	smooth_adapters = SMOOTH_ADAPTERS_WALLS
 
 /obj/structure/window/plasma/fulltile
-	icon = 'icons/obj/smooth_structures/window.dmi'
+	icon = 'icons/obj/smooth_structures/plasma_window.dmi'
 	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE
-	base_icon_state = "window"
-	icon_state = "window-0"
-	glass_color_blend_to_color = "#8000ff"
-	glass_color_blend_to_ratio = 0.5
+	base_icon_state = "plasma_window"
+	icon_state = "plasma_window-0"
 	smooth_adapters = SMOOTH_ADAPTERS_WALLS
 
 /obj/structure/grille/window_sill
