@@ -423,8 +423,8 @@ GLOBAL_PROTECT(tracy_init_reason)
 	if(length(features))
 		new_status += ": [jointext(features, ", ")]"
 
-	new_status += "<br>Beginner Friendly: <b>Learn to play SS13!</b>"
-	new_status += "<br>Roleplay: \[<b>Medium-Rare</b>\]"
+	new_status += "<br>Now with Nickacado Avacado as a playable antagonist! Lax Rules, Chill Jannies.</b>"
+	new_status += "<br>Roleplay: \[<b>A24 Slowburn Atmospheric Driven Kino With No Jumpscares, 100% Character-Driven</b>\]"
 
 	new_status += "<br>Time: <b>[gameTimestamp("hh:mm")]</b>"
 	if(SSmapping.config)

@@ -632,7 +632,7 @@
 	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/blast_door.dmi'
 
 /obj/machinery/door/poddoor
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/blast_door.dmi'
+	icon = 'icons/obj/doors/blastdoor.dmi'
 	door_align_type = /obj/machinery/door/poddoor
 
 //SKYRAT EDIT ADDITION BEGIN - AESTHETICS
