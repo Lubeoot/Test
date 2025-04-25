@@ -1,0 +1,5 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - rscadd: "Respawning player side."
+  - rscadd: "Added new wooden floor sprites, large wooden tiles currently have a placeholding sprite."
