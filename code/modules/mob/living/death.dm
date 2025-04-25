@@ -82,45 +82,50 @@
  * * gibbed - Was the mob gibbed?
 */
 /mob/living/proc/death(gibbed)
-	if(stat == DEAD)
-		return FALSE
+    if(stat == DEAD)
+        return FALSE
 
-	if(!gibbed && (death_sound || death_message || (living_flags & ALWAYS_DEATHGASP)))
-		INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, emote), "deathgasp")
+    if(!gibbed && (death_sound || death_message || (living_flags & ALWAYS_DEATHGASP)))
+        INVOKE_ASYNC(src, TYPE_PROC_REF(/mob, emote), "deathgasp")
 
-	set_stat(DEAD)
-	unset_machine()
-	timeofdeath = world.time
-	tod = station_time_timestamp()
-	var/turf/death_turf = get_turf(src)
-	var/area/death_area = get_area(src)
-	// Display a death message if the mob is a player mob (has an active mind)
-	var/player_mob_check = mind && mind.name && mind.active
-	// and, display a death message if the area allows it (or if they're in nullspace)
-	var/valid_area_check = !death_area || !(death_area.area_flags & NO_DEATH_MESSAGE)
-	if(player_mob_check)
-		if(valid_area_check)
-			deadchat_broadcast(" has died at <b>[get_area_name(death_turf)]</b>.", "<b>[mind.name]</b>", follow_target = src, turf_target = death_turf, message_type=DEADCHAT_DEATHRATTLE)
-		if(SSlag_switch.measures[DISABLE_DEAD_KEYLOOP] && !client?.holder)
-			to_chat(src, span_deadsay(span_big("Observer freelook is disabled.\nPlease use Orbit, Teleport, and Jump to look around.")))
-			ghostize(TRUE)
-	set_disgust(0)
-	SetSleeping(0, 0)
-	reset_perspective(null)
-	reload_fullscreen()
-	update_mob_action_buttons()
-	update_damage_hud()
-	update_health_hud()
-	med_hud_set_health()
-	med_hud_set_status()
-	stop_pulling()
+    set_stat(DEAD)
+    unset_machine()
+    timeofdeath = world.time
+    tod = station_time_timestamp()
 
-	set_ssd_indicator(FALSE)
+    // Update player_details with the time of death
+    if(client && client.player_details)
+        client.player_details.time_of_death = timeofdeath
 
-	SEND_SIGNAL(src, COMSIG_LIVING_DEATH, gibbed)
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
+    var/turf/death_turf = get_turf(src)
+    var/area/death_area = get_area(src)
+    // Display a death message if the mob is a player mob (has an active mind)
+    var/player_mob_check = mind && mind.name && mind.active
+    // and, display a death message if the area allows it (or if they're in nullspace)
+    var/valid_area_check = !death_area || !(death_area.area_flags & NO_DEATH_MESSAGE)
+    if(player_mob_check)
+        if(valid_area_check)
+            deadchat_broadcast(" has died at <b>[get_area_name(death_turf)]</b>.", "<b>[mind.name]</b>", follow_target = src, turf_target = death_turf, message_type=DEADCHAT_DEATHRATTLE)
+        if(SSlag_switch.measures[DISABLE_DEAD_KEYLOOP] && !client?.holder)
+            to_chat(src, span_deadsay(span_big("Observer freelook is disabled.\nPlease use Orbit, Teleport, and Jump to look around.")))
+            ghostize(TRUE)
+    set_disgust(0)
+    SetSleeping(0, 0)
+    reset_perspective(null)
+    reload_fullscreen()
+    update_mob_action_buttons()
+    update_damage_hud()
+    update_health_hud()
+    med_hud_set_health()
+    med_hud_set_status()
+    stop_pulling()
 
-	if (client)
-		client.move_delay = initial(client.move_delay)
+    set_ssd_indicator(FALSE)
 
-	return TRUE
+    SEND_SIGNAL(src, COMSIG_LIVING_DEATH, gibbed)
+    SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
+
+    if (client)
+        client.move_delay = initial(client.move_delay)
+
+    return TRUE

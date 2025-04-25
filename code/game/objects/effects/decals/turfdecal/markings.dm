@@ -294,7 +294,7 @@ SIDING_SUBTYPE_HELPER(/obj/effect/turf_decal/siding/dark)
 
 /obj/effect/turf_decal/siding/wood
 	icon_state = "siding_wood_line"
-	color = "#5d341f"
+	color = "#4C3117"
 
 SIDING_SUBTYPE_HELPER(/obj/effect/turf_decal/siding/wood)
 
