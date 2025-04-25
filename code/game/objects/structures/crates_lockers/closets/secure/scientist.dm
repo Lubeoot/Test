@@ -17,6 +17,10 @@
 	new /obj/item/storage/photo_album/rd(src)
 	new /obj/item/storage/box/skillchips/science(src)
 
+	if(CONFIG_GET(number/roundstart_bluespace_miners))
+		for(var/i in 1 to CONFIG_GET(number/roundstart_bluespace_miners))
+			new /obj/item/circuitboard/machine/bluespace_miner(src)
+
 /obj/structure/closet/secure_closet/research_director/populate_contents_immediate()
 	. = ..()
 

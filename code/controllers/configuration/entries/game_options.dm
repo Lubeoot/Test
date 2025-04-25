@@ -364,6 +364,12 @@
 	integer = FALSE
 	min_val = 0
 
+//Bluespace Miners
+/datum/config_entry/number/roundstart_bluespace_miners
+	min_val = 0
+
+/datum/config_entry/flag/bsminer_researchable
+
 /datum/config_entry/flag/allow_random_events // Enables random events mid-round when set
 
 /datum/config_entry/flag/forbid_station_traits
