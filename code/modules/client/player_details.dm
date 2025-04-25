@@ -16,12 +16,17 @@ GLOBAL_LIST_EMPTY_TYPED(player_details, /datum/player_details)
 	/// List of names this key played under this round
 	/// assoc list of name -> mob tag
 	var/list/played_names = list()
+	/// Lazylist of preference slots this client has joined the round under
+	/// Numbers are stored as strings
+	var/list/joined_as_slots
 	/// Major version of BYOND this client is using.
 	var/byond_version
 	/// Build number of BYOND this client is using.
 	var/byond_build
 	/// Tracks achievements they have earned
 	var/datum/achievement_data/achievements
+	/// World.time this player last died
+	var/time_of_death = 0
 
 /datum/player_details/New(player_key)
 	src.ckey = ckey(player_key)
