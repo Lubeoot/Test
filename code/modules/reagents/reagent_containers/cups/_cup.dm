@@ -287,7 +287,7 @@
 	righthand_file = 'icons/mob/inhands/items_righthand.dmi'
 	worn_icon_state = "beaker"
 	custom_materials = list(/datum/material/glass=SMALL_MATERIAL_AMOUNT*5)
-	fill_icon_thresholds = list(0, 1, 20, 40, 60, 80, 100)
+	fill_icon_thresholds = list(0, 1, 25, 50, 75, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/Initialize(mapload)
 	. = ..()
@@ -310,7 +310,7 @@
 	volume = 100
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5,10,15,20,25,30,50,100)
-	fill_icon_thresholds = list(0, 1, 20, 40, 60, 80, 100)
+	fill_icon_thresholds = list(0, 1, 10, 25, 50, 75, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/plastic
 	name = "x-large beaker"
@@ -320,7 +320,7 @@
 	volume = 120
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5,10,15,20,25,30,60,120)
-	fill_icon_thresholds = list(0, 1, 10, 20, 40, 60, 80, 100)
+	fill_icon_thresholds = list(0, 1, 10, 25, 50, 75, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/meta
 	name = "metamaterial beaker"
@@ -330,7 +330,7 @@
 	volume = 180
 	amount_per_transfer_from_this = 10
 	possible_transfer_amounts = list(5,10,15,20,25,30,60,120,180)
-	fill_icon_thresholds = list(0, 1, 10, 25, 35, 50, 60, 80, 100)
+	fill_icon_thresholds = list(0, 1, 10, 25, 50, 75, 80, 100)
 
 /obj/item/reagent_containers/cup/beaker/noreact
 	name = "cryostasis beaker"
