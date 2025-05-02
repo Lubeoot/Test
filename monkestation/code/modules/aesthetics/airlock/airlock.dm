@@ -387,33 +387,7 @@
 /obj/machinery/door/airlock/bathroom
 	icon = 'icons/obj/doors/airlocks/station/public.dmi'
 
-//STATION MINERAL AIRLOCKS
-/obj/machinery/door/airlock/gold
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/gold.dmi'
-
-/obj/machinery/door/airlock/silver
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/silver.dmi'
-
-/obj/machinery/door/airlock/diamond
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/diamond.dmi'
-
-/obj/machinery/door/airlock/uranium
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/uranium.dmi'
-
-/obj/machinery/door/airlock/plasma
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/plasma.dmi'
-
-/obj/machinery/door/airlock/bananium
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/bananium.dmi'
-
-/obj/machinery/door/airlock/sandstone
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/sandstone.dmi'
-
-/obj/machinery/door/airlock/wood
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/wood.dmi'
-
 //STATION 2 AIRLOCKS
-
 /obj/machinery/door/airlock/public
 	icon = 'icons/obj/doors/airlocks/station2/glass.dmi'
 	overlays_file = 'icons/obj/doors/airlocks/station2/overlays.dmi'
@@ -522,30 +496,6 @@
 /obj/structure/door_assembly/door_assembly_grunge
 	icon = 'icons/obj/doors/airlocks/centcom/centcom.dmi'
 	overlays_file = 'icons/obj/doors/airlocks/centcom/overlays.dmi'
-
-/obj/structure/door_assembly/door_assembly_gold
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/gold.dmi'
-
-/obj/structure/door_assembly/door_assembly_silver
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/silver.dmi'
-
-/obj/structure/door_assembly/door_assembly_diamond
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/diamond.dmi'
-
-/obj/structure/door_assembly/door_assembly_uranium
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/uranium.dmi'
-
-/obj/structure/door_assembly/door_assembly_plasma
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/plasma.dmi'
-
-/obj/structure/door_assembly/door_assembly_bananium
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/bananium.dmi'
-
-/obj/structure/door_assembly/door_assembly_sandstone
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/sandstone.dmi'
-
-/obj/structure/door_assembly/door_assembly_wood
-	icon = 'monkestation/code/modules/aesthetics/airlock/icons/airlocks/station/wood.dmi'
 
 /obj/structure/door_assembly/door_assembly_corporate
 	name = "corporate airlock assembly"
