@@ -1,0 +1,4 @@
+author: "Lubeoot"
+delete-after: True
+changes:
+  - rscadd: "Added old sprites as replacements to new sprites"
