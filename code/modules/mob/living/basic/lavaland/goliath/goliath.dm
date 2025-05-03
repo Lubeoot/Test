@@ -13,6 +13,8 @@
 	health = 300
 	friendly_verb_continuous = "wails at"
 	friendly_verb_simple = "wail at"
+	pixel_x = 0
+	base_pixel_x = 0
 	speak_emote = list("bellows")
 	obj_damage = 100
 	melee_damage_lower = 25

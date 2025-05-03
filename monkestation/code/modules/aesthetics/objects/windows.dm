@@ -13,33 +13,6 @@
 		color = glass_color
 	update_appearance()
 
-
-/obj/structure/window/fulltile
-	icon = 'icons/obj/smooth_structures/window.dmi'
-	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE
-	smooth_adapters = SMOOTH_ADAPTERS_WALLS
-
-/obj/structure/window/reinforced/plasma/fulltile
-	icon = 'icons/obj/smooth_structures/rplasma_window.dmi'
-	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE
-	base_icon_state = "rplasma_window"
-	icon_state = "rplasma_window-0"
-	smooth_adapters = SMOOTH_ADAPTERS_WALLS
-
-/obj/structure/window/reinforced/fulltile
-	icon = 'icons/obj/smooth_structures/reinforced_window.dmi'
-	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE
-	base_icon_state = "reinforced_window"
-	icon_state = "reinforced_window-0"
-	smooth_adapters = SMOOTH_ADAPTERS_WALLS
-
-/obj/structure/window/plasma/fulltile
-	icon = 'icons/obj/smooth_structures/plasma_window.dmi'
-	canSmoothWith = SMOOTH_GROUP_WINDOW_FULLTILE
-	base_icon_state = "plasma_window"
-	icon_state = "plasma_window-0"
-	smooth_adapters = SMOOTH_ADAPTERS_WALLS
-
 /obj/structure/grille/window_sill
 	name = "window grille"
 	desc = "A flimsy framework of iron rods. This one fits a window!"
