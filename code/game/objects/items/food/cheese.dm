@@ -9,18 +9,18 @@
 	tastes = list("cheese" = 1)
 	food_reagents = list(/datum/reagent/consumable/nutriment/protein = 3)
 	foodtypes = DAIRY
-	/// used to determine how much health rats/regal rats recover when they eat it.
-	var/rat_heal = 0
+	/// used to determine how much health terrible mice/feral squirrels recover when they eat it.
+	var/squirrel_heal = 0
 
 /obj/item/food/cheese/Initialize(mapload)
 	. = ..()
-	RegisterSignal(src, COMSIG_RAT_INTERACT, PROC_REF(on_rat_eat))
+	RegisterSignal(src, COMSIG_SQUIRREL_INTERACT, PROC_REF(on_squirrel_eat))
 
-/obj/item/food/cheese/proc/on_rat_eat(datum/source, mob/living/basic/regal_rat/king)
+/obj/item/food/cheese/proc/on_squirrel_eat(datum/source, mob/living/basic/feral_squirrel/king)
 	SIGNAL_HANDLER
 
-	king.cheese_heal(src, rat_heal, span_green("You eat [src], restoring some health."))
-	return COMPONENT_RAT_INTERACTED
+	king.cheese_heal(src, squirrel_heal, span_green("You eat [src], restoring some health."))
+	return COMPONENT_SQUIRREL_INTERACTED
 
 /obj/item/food/cheese/wedge
 	name = "cheese wedge"
@@ -32,7 +32,7 @@
 		/datum/reagent/consumable/nutriment/vitamin = 1,
 	)
 	w_class = WEIGHT_CLASS_SMALL
-	rat_heal = 10
+	squirrel_heal = 10
 
 /obj/item/food/cheese/wheel
 	name = "cheese wheel"
@@ -44,7 +44,7 @@
 		/datum/reagent/consumable/nutriment/vitamin = 5,
 	) //Hard cheeses contain about 25% protein
 	w_class = WEIGHT_CLASS_NORMAL
-	rat_heal = 35
+	squirrel_heal = 35
 
 /obj/item/food/cheese/wheel/Initialize(mapload)
 	. = ..()
@@ -77,7 +77,7 @@
 	)
 	w_class = WEIGHT_CLASS_BULKY
 	tastes = list("cheese" = 4, "royalty" = 1)
-	rat_heal = 70
+	squirrel_heal = 70
 
 //Curd cheese, a general term which I will now proceed to stretch as thin as the toppings on a supermarket sandwich:
 //I'll use it as a substitute for ricotta, cottage cheese and quark, as well as any other non-aged, soft grainy cheese
@@ -92,7 +92,7 @@
 	tastes = list("cream" = 1, "cheese" = 1)
 	foodtypes = DAIRY
 	w_class = WEIGHT_CLASS_SMALL
-	rat_heal = 35
+	squirrel_heal = 35
 
 /obj/item/food/cheese/curd_cheese/make_bakeable()
 	AddComponent(/datum/component/bakeable, /obj/item/food/cheese/cheese_curds, rand(15 SECONDS, 20 SECONDS), TRUE, TRUE)
@@ -106,7 +106,7 @@
 	icon_state = "cheese_curds"
 	foodtypes = DAIRY
 	w_class = WEIGHT_CLASS_SMALL
-	rat_heal = 35
+	squirrel_heal = 35
 
 /obj/item/food/cheese/cheese_curds/Initialize(mapload)
 	. = ..()
@@ -119,7 +119,7 @@
 	tastes = list("aged cheese" = 1)
 	foodtypes = DAIRY | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
-	rat_heal = 35
+	squirrel_heal = 35
 
 /obj/item/food/cheese/firm_cheese/make_processable()
 	AddElement(/datum/element/processable, TOOL_KNIFE, /obj/item/food/cheese/firm_cheese_slice, 3, 3 SECONDS, screentip_verb = "Slice")
@@ -132,7 +132,7 @@
 	foodtypes = DAIRY | VEGETABLES
 	w_class = WEIGHT_CLASS_SMALL
 	burns_on_grill = TRUE
-	rat_heal = 10
+	squirrel_heal = 10
 
 /obj/item/food/cheese/firm_cheese_slice/make_grillable()
 	AddComponent(/datum/component/grillable, /obj/item/food/grilled_cheese, rand(25 SECONDS, 35 SECONDS), TRUE, TRUE)
@@ -144,4 +144,4 @@
 	tastes = list("mozzarella" = 1)
 	foodtypes = DAIRY
 	w_class = WEIGHT_CLASS_SMALL
-	rat_heal = 10
+	squirrel_heal = 10

@@ -189,7 +189,7 @@ GLOBAL_LIST_INIT(cat_typecache, typecacheof(list(
 
 #define ishostile(A) (istype(A, /mob/living/simple_animal/hostile))
 
-#define isregalrat(A) (istype(A, /mob/living/basic/regal_rat))
+#define isferalsquirrel(A) (istype(A, /mob/living/basic/feral_squirrel))
 
 #define isguardian(A) (istype(A, /mob/living/basic/guardian))
 

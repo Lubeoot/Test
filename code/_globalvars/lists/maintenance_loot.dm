@@ -431,7 +431,7 @@ GLOBAL_LIST_INIT(good_maintenance_loot, list(
 	GLOB.oddity_loot = maint_oddity_weight,
 	))
 
-GLOBAL_LIST_INIT(ratking_trash, list(//Garbage: used by the regal rat mob when spawning garbage.
+GLOBAL_LIST_INIT(feralsquirrel_trash, list(//Garbage: used by the feral squirrel mob when spawning garbage.
 			/obj/item/cigbutt,
 			/obj/item/trash/candy,
 			/obj/item/trash/cheesie,
@@ -443,7 +443,7 @@ GLOBAL_LIST_INIT(ratking_trash, list(//Garbage: used by the regal rat mob when s
 			/obj/item/trash/syndi_cakes,
 		))
 
-GLOBAL_LIST_INIT(ratking_coins, list(//Coins: Used by the regal rat mob when spawning coins.
+GLOBAL_LIST_INIT(feralsquirrel_coins, list(//Coins: Used by the feral squirrel mob when spawning coins.
 			/obj/item/coin/iron,
 			/obj/item/coin/plastic,
 			/obj/item/coin/silver,

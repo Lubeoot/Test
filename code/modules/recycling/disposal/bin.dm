@@ -58,7 +58,7 @@
 	air_contents = new /datum/gas_mixture()
 	//gas.volume = 1.05 * CELLSTANDARD
 	update_appearance()
-	RegisterSignal(src, COMSIG_RAT_INTERACT, PROC_REF(on_rat_rummage))
+	RegisterSignal(src, COMSIG_SQUIRREL_INTERACT, PROC_REF(on_rat_rummage))
 	RegisterSignal(src, COMSIG_STORAGE_DUMP_CONTENT, PROC_REF(on_storage_dump))
 	var/static/list/loc_connections = list(
 		COMSIG_CARBON_DISARM_COLLIDE = PROC_REF(trash_carbon),
@@ -133,24 +133,24 @@
 	else
 		return ..()
 
-/// The regal rat spawns ratty treasures from the disposal
-/obj/machinery/disposal/proc/rat_rummage(mob/living/basic/regal_rat/king)
+/// The feral squirrel spawns nutty treasures from the disposal
+/obj/machinery/disposal/proc/rat_rummage(mob/living/basic/feral_squirrel/king)
 	king.visible_message(span_warning("[king] starts rummaging through [src]."),span_notice("You rummage through [src]..."))
-	if (!do_after(king, 2 SECONDS, src, interaction_key = "regalrat"))
+	if (!do_after(king, 2 SECONDS, src, interaction_key = "feralsquirrel"))
 		return
 	var/loot = rand(1,100)
 	switch(loot)
 		if(1 to 5)
-			to_chat(king, span_notice("You find some leftover coins. More for the royal treasury!"))
-			var/pickedcoin = pick(GLOB.ratking_coins)
+			to_chat(king, span_notice("You find some leftover gems. Thats nuts!"))
+			var/pickedcoin = pick(GLOB.feralsquirrel_coins)
 			for(var/i = 1 to rand(1,3))
 				new pickedcoin(get_turf(king))
 		if(6 to 33)
-			king.say(pick("Treasure!","Our precious!","Cheese!"), ignore_spam = TRUE, forced = "regal rat rummaging")
+			king.say(pick("Treasure!","Our precious!","Cheese!"), ignore_spam = TRUE, forced = "feral squirrel rummaging")
 			to_chat(king, span_notice("Score! You find some cheese!"))
 			new /obj/item/food/cheese/wedge(get_turf(king))
 		else
-			var/pickedtrash = pick(GLOB.ratking_trash)
+			var/pickedtrash = pick(GLOB.feralsquirrel_trash)
 			to_chat(king, span_notice("You just find more garbage and dirt. Lovely, but beneath you now."))
 			new pickedtrash(get_turf(king))
 
@@ -565,14 +565,14 @@
 /obj/vehicle/sealed/mecha/CanEnterDisposals()
 	return
 
-/// Handles the signal for the rat king looking inside the disposal
-/obj/machinery/disposal/proc/on_rat_rummage(datum/source, mob/living/basic/regal_rat/king)
+/// Handles the signal for the feral squirrel looking inside the disposal
+/obj/machinery/disposal/proc/on_rat_rummage(datum/source, mob/living/basic/feral_squirrel/king)
 	SIGNAL_HANDLER
 	if(king.istate & ISTATE_HARM)
 		return
 
 	INVOKE_ASYNC(src, TYPE_PROC_REF(/obj/machinery/disposal/, rat_rummage), king)
-	return COMPONENT_RAT_INTERACTED
+	return COMPONENT_SQUIRREL_INTERACTED
 
 /// Handles a carbon mob getting shoved into the disposal bin
 /obj/machinery/disposal/proc/trash_carbon(datum/source, mob/living/carbon/shover, mob/living/carbon/target, shove_blocked)

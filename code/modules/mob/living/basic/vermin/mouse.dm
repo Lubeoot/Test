@@ -86,7 +86,7 @@
 	. = ..()
 
 	var/sameside = user.faction_check_atom(src, exact_match = TRUE)
-	if(isregalrat(user))
+	if(isferalsquirrel(user))
 		if(sameside)
 			. += span_notice("This rat serves under you.")
 		else
@@ -235,9 +235,9 @@
 
 /// Evolves this rat into a regal rat
 /mob/living/basic/mouse/proc/evolve_into_regal_rat()
-	var/mob/living/basic/regal_rat/controlled/regalrat = new(loc)
-	mind?.transfer_to(regalrat)
-	INVOKE_ASYNC(regalrat, TYPE_PROC_REF(/atom/movable, say), "RISE, MY SUBJECTS! SCREEEEEEE!")
+	var/mob/living/basic/feral_squirrel/controlled/feralsquirrel = new(loc)
+	mind?.transfer_to(feralsquirrel)
+	INVOKE_ASYNC(feralsquirrel, TYPE_PROC_REF(/atom/movable, say), "RISE, MY SUBJECTS! SCREEEEEEE!")
 	qdel(src)
 
 /// Creates a new mouse based on this mouse's subtype.

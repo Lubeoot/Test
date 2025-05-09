@@ -144,8 +144,8 @@
 			splatted.adjust_health(5)
 			splatted.Stun(1 SECONDS)
 
-	else if(isregalrat(target))
-		visible_message(span_boldannounce("Skreeeee!")) //He's simply too large to be affected by a tiny mouse trap.
+	else if(isferalsquirrel(target))
+		visible_message(span_boldannounce("THATS NUTS!")) //He's simply too large to be affected by a tiny mouse trap.
 
 	// MONKESTATION ADDITION START -- ID:CORTICAL_BORERS
 	else if(iscorticalborer(target))
@@ -207,7 +207,7 @@
 						INVOKE_ASYNC(src, PROC_REF(triggered), H)
 						H.visible_message(span_warning("[H] accidentally steps on [src]."), \
 							span_warning("You accidentally step on [src]"))
-				else if(ismouse(MM) || isregalrat(MM))
+				else if(ismouse(MM) || isferalsquirrel(MM))
 					INVOKE_ASYNC(src, PROC_REF(triggered), MM)
 		else if(AM.density) // For mousetrap grenades, set off by anything heavy
 			INVOKE_ASYNC(src, PROC_REF(triggered), AM)
