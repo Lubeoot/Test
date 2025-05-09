@@ -173,7 +173,7 @@ GLOBAL_DATUM_INIT(orbit_menu, /datum/orbit_menu, new)
 		if(!mob_allowed_typecache)
 			mob_allowed_typecache = typecacheof(list(
 				/mob/camera,
-				/mob/living/basic/regal_rat,
+				/mob/living/basic/feral_squirrel,
 				/mob/living/simple_animal/bot,
 				/mob/living/simple_animal/hostile/megafauna,
 				/mob/living/basic/chicken/gary, // monkestation edit: gary

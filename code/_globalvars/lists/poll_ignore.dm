@@ -26,7 +26,7 @@
 #define POLL_IGNORE_POSSESSED_BLADE "possessed_blade"
 #define POLL_IGNORE_PYROSLIME "slime"
 #define POLL_IGNORE_RAW_PROPHET "raw_prophet"
-#define POLL_IGNORE_REGAL_RAT "regal_rat"
+#define POLL_IGNORE_FERAL_SQUIRREL "feral_squirrel"
 #define POLL_IGNORE_RUST_SPIRIT "rust_spirit"
 #define POLL_IGNORE_SENTIENCE_POTION "sentience_potion"
 #define POLL_IGNORE_SPIDER "spider"
@@ -67,7 +67,7 @@ GLOBAL_LIST_INIT(poll_ignore_desc, list(
 	POLL_IGNORE_PYROSLIME = "Slime",
 	POLL_IGNORE_RAW_PROPHET = "Raw Prophet",
 	POLL_IGNORE_RUST_SPIRIT = "Rust Spirit",
-	POLL_IGNORE_REGAL_RAT = "Regal rat",
+	POLL_IGNORE_FERAL_SQUIRREL = "Feral Squirrel",
 	POLL_IGNORE_SENTIENCE_POTION = "Sentience potion",
 	POLL_IGNORE_POSSESSED_BLADE = "Possessed blade",
 	POLL_IGNORE_ALIEN_LARVA = "Xenomorph larva",
@@ -90,7 +90,7 @@ GLOBAL_LIST_INIT(poll_ignore_desc, list(
 	POLL_IGNORE_ACADEMY_WIZARD = "Academy Wizard Defender",
 	POLL_IGNORE_PAI = JOB_PERSONAL_AI,
 	POLL_IGNORE_VENUSHUMANTRAP = "Venus Human Traps",
-	POLL_IGNORE_REGAL_RAT = "Regal rat",
+	POLL_IGNORE_FERAL_SQUIRREL = "Feral Squirrel",
 	POLL_IGNORE_CARGORILLA = "Cargorilla",
 	POLL_IGNORE_MONKEY_HELMET = "Mind magnified monkey",
 	POLL_IGNORE_LAVALAND_ELITE = "Lavaland elite",

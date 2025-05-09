@@ -1,4 +1,4 @@
-/datum/ai_controller/basic_controller/regal_rat
+/datum/ai_controller/basic_controller/feral_squirrel
 	blackboard = list(
 		BB_TARGETING_STRATEGY = /datum/targeting_strategy/basic,
 		BB_FLEE_TARGETING_STRATEGY = /datum/targeting_strategy/basic,

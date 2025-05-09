@@ -1,11 +1,11 @@
 /**
- *Increase the rat king's domain
+ *Increase the feral squirrel's domain
  */
 
 /datum/action/cooldown/mob_cooldown/domain
-	name = "Rat King's Domain"
-	desc = "Corrupts this area to be more suitable for your rat army."
-	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED|AB_CHECK_OPEN_TURF // monkestation edit: add AB_CHECK_OPEN_TURF
+	name = "Dig up"
+	desc = "Digs up valuables such as gemeralds and nuts."
+	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED|AB_CHECK_OPEN_TURF // monkestation edit: add AB_CHECK_OPEN_TURF // shartystation edit : it was like three words bro
 	cooldown_time = 6 SECONDS
 	melee_cooldown_time = 0 SECONDS
 	button_icon = 'icons/mob/actions/actions_animal.dmi'
@@ -37,8 +37,8 @@
  * If none are nearby, creates a new mouse.
  */
 /datum/action/cooldown/mob_cooldown/riot
-	name = "Raise Army"
-	desc = "Raise an army out of the hordes of mice and pests crawling around the maintenance shafts."
+	name = "Sing Nutwave"
+	desc = "Sing Nutwave, attracting the creatures of the station and rallying them to your cause."
 	check_flags = AB_CHECK_CONSCIOUS|AB_CHECK_INCAPACITATED
 	button_icon = 'icons/mob/actions/actions_animal.dmi'
 	button_icon_state = "riot"
@@ -49,7 +49,7 @@
 	shared_cooldown = NONE
 	/// How close does something need to be for us to recruit it?
 	var/range = 5
-	/// Commands you can give to your mouse army
+	/// Commands you can give to your terrible mouse army
 	var/static/list/mouse_commands = list(
 		/datum/pet_command/idle,
 		/datum/pet_command/free,
@@ -73,7 +73,7 @@
 
 /**
  * Attempts to, in order and ending at any successful step:
- * * Convert nearby mice into aggressive rats.
+ * * Convert nearby mice into terrible mice.
  * * Convert nearby roaches into aggressive roaches.
  * * Convert nearby frogs into aggressive frogs.
  * * Spawn a single mouse if below the mouse cap.
@@ -83,7 +83,7 @@
 	for (var/mob/living/basic/mouse/nearby_mouse in oview(owner, range))
 		uplifted_mice = convert_mouse(nearby_mouse) || uplifted_mice
 	if (uplifted_mice)
-		owner.visible_message(span_warning("[owner] commands their army to action, mutating them into rats!"))
+		owner.visible_message(span_warning("[owner] sings nutwave, making the mice terrible!"))
 		return
 
 	var/static/list/converted_check_list = list(FACTION_RAT)
@@ -91,28 +91,28 @@
 	for (var/mob/living/basic/cockroach/nearby_roach in oview(owner, range))
 		uplifted_roach = convert_roach(nearby_roach, converted_check_list) || uplifted_roach
 	if (uplifted_roach)
-		owner.visible_message(span_warning("[owner] commands their army to action, mutating them into sewer roaches!"))
+		owner.visible_message(span_warning("[owner] sings nutwave, making the roach feel nostalgic!"))
 		return
 
 	var/uplifted_frog = FALSE
 	for (var/mob/living/basic/frog/nearby_frog in oview(owner, range))
 		uplifted_frog = convert_frog(nearby_frog, converted_check_list) || uplifted_frog
 	if (uplifted_frog)
-		owner.visible_message(span_warning("[owner] commands their army to action, mutating them into trash frogs!"))
+		owner.visible_message(span_warning("[owner] sings nutwave, turning the frog into a ribbit rally!"))
 		return
 
 	var/rat_cap = CONFIG_GET(number/ratcap)
 	if (LAZYLEN(SSmobs.cheeserats) >= rat_cap)
-		to_chat(owner,span_warning("There's too many mice on this station to beckon a new one! Find them first!"))
+		to_chat(owner,span_warning("There's too many terrible mice on the booru to force a new one! Delete some first!"))
 		return
 	new /mob/living/basic/mouse/ratking(owner.loc)
-	owner.visible_message(span_warning("[owner] commands a rat to their side!"))
+	owner.visible_message(span_warning("[owner] sings nutwave, turning the mouse terrible!"))
 
 /// Makes a passed mob into our minion
 /datum/action/cooldown/mob_cooldown/riot/proc/make_minion(mob/living/new_minion, minion_desc, list/command_list = mouse_commands)
 	if (isbasicmob(new_minion))
 		new_minion.AddComponent(/datum/component/obeys_commands, command_list)
-		qdel(new_minion.GetComponent(/datum/component/tameable)) // Rats don't share
+		qdel(new_minion.GetComponent(/datum/component/tameable)) // Squirrels don't share, so much for solidarity
 	new_minion.befriend(owner)
 	new_minion.faction = owner.faction.Copy()
 	// Give a hint in description too
@@ -121,23 +121,25 @@
 
 /// Turns a mouse into an angry mouse
 /datum/action/cooldown/mob_cooldown/riot/proc/convert_mouse(mob/living/basic/mouse/nearby_mouse)
-	// This mouse is already rat controlled, let's not bother with it.
+	// This mouse is already squirrel controlled, let's not bother with it.
 	if (istype(nearby_mouse.ai_controller, /datum/ai_controller/basic_controller/mouse/rat))
 		return FALSE
 
-	var/mob/living/basic/mouse/rat/rat_path = /mob/living/basic/mouse/rat
+	var/mob/living/basic/mouse/rat/squirrel_path = /mob/living/basic/mouse/rat
 	// Change name
-	if (nearby_mouse.name == "mouse")
-		nearby_mouse.name = initial(rat_path.name)
-	// Buffs our combat stats to that of a rat
-	nearby_mouse.melee_damage_lower = initial(rat_path.melee_damage_lower)
-	nearby_mouse.melee_damage_upper = initial(rat_path.melee_damage_upper)
-	nearby_mouse.obj_damage = initial(rat_path.obj_damage)
-	nearby_mouse.maxHealth = initial(rat_path.maxHealth)
-	nearby_mouse.health = initial(rat_path.health)
-	// Replace our AI with a rat one
+	if (nearby_mouse.name == "Terrible Mouse")
+		nearby_mouse.name = initial(squirrel_path.name)
+	// Buffs our combat stats to that of a squirrel
+	nearby_mouse.melee_damage_lower = initial(squirrel_path.melee_damage_lower)
+	nearby_mouse.melee_damage_upper = initial(squirrel_path.melee_damage_upper)
+	nearby_mouse.obj_damage = initial(squirrel_path.obj_damage)
+	nearby_mouse.maxHealth = initial(squirrel_path.maxHealth)
+	nearby_mouse.health = initial(squirrel_path.health)
+	nearby_mouse.icon_state += "_terrible"
+	nearby_mouse.icon_living += "_terrible"
+	// Replace our AI with a squirrel one
 	nearby_mouse.ai_controller = new /datum/ai_controller/basic_controller/mouse/rat(nearby_mouse)
-	make_minion(nearby_mouse, " ...Except this one looks corrupted and aggressive.")
+	make_minion(nearby_mouse, " ...is what it used to be, it's been warped by nutwave into a terrible version of its natural form, rumored to know how to perform surgical operations.")
 	return TRUE
 
 /// Turns a roach into an angry roach
@@ -208,34 +210,34 @@
 	attack_behaviour = /datum/ai_behavior/basic_ranged_attack/glockroach
 
 /**
- *Spittle; harmless reagent that is added by rat king, and makes you disgusted.
+ *Spittle; harmless reagent that is added by feral rat, and makes you disgusted.
  */
 
-/datum/reagent/rat_spit
-	name = "Rat Spit"
-	description = "Something coming from a rat. Dear god! Who knows where it's been!"
+/datum/reagent/squirrel_spit
+	name = "squirrel Spit"
+	description = "Something coming from a squirrel. Dear god! Who knows where it's been!"
 	reagent_state = LIQUID
 	color = "#C8C8C8"
 	metabolization_rate = 0.03 * REAGENTS_METABOLISM
 	taste_description = "something funny"
 	overdose_threshold = 20
 
-/datum/reagent/rat_spit/on_mob_metabolize(mob/living/L)
+/datum/reagent/squirrel_spit/on_mob_metabolize(mob/living/L)
 	..()
 	if(HAS_TRAIT(L, TRAIT_AGEUSIA))
 		return
 	to_chat(L, span_notice("This food has a funny taste!"))
 
-/datum/reagent/rat_spit/overdose_start(mob/living/M)
+/datum/reagent/squirrel_spit/overdose_start(mob/living/M)
 	..()
 	var/mob/living/carbon/victim = M
 	if (istype(victim) && !(FACTION_RAT in victim.faction))
-		to_chat(victim, span_userdanger("With this last sip, you feel your body convulsing horribly from the contents you've ingested. As you contemplate your actions, you sense an awakened kinship with rat-kind and their newly risen leader!"))
+		to_chat(victim, span_userdanger("With this last sip, you feel your body convulsing horribly from the contents you've ingested. As you contemplate your actions, you sense an awakened kinship with squirrel-kind and their newly risen leader!"))
 		victim.faction |= FACTION_RAT
 		victim.vomit()
 	metabolization_rate = 10 * REAGENTS_METABOLISM
 
-/datum/reagent/rat_spit/on_mob_life(mob/living/carbon/C)
+/datum/reagent/squirrel_spit/on_mob_life(mob/living/carbon/C)
 	if(prob(15))
 		to_chat(C, span_notice("You feel queasy!"))
 		C.adjust_disgust(3)

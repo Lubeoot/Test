@@ -1,18 +1,18 @@
-#define REGALRAT_INTERACTION "regalrat"
+#define FERALSQUIRREL_INTERACTION "feralsquirrel"
 
-/// The cheesiest, most crowned rat of them all. Regent superior of all rats in maintenance... at least until someone else tries to encroach on their claim.
-/mob/living/basic/regal_rat
-	name = "feral regal rat"
-	desc = "An evolved rat, created through some strange science. They lead nearby rats with deadly efficiency to protect their kingdom."
-	icon_state = "regalrat"
-	icon_living = "regalrat"
-	icon_dead = "regalrat_dead"
+/// The cheesiest, most crowned squirrel of them all. Regent superior of all squirrels in maintenance... at least until someone else tries to encroach on their claim.
+/mob/living/basic/feral_squirrel
+	name = "feral squirrel"
+	desc = "A red squirrel, one of the last of their kind, displacement from their native habitats has led to them invading space structures."
+	icon_state = "squirreljak"
+	icon_living = "squirreljak"
+	icon_dead = "squirreljak_dead"
 	gender = MALE
 
 	maxHealth = 70
 	health = 70
 
-	butcher_results = list(/obj/item/food/meat/slab/mouse = 2, /obj/item/clothing/head/costume/crown = 1)
+	butcher_results = list(/obj/item/food/meat = 2, /obj/item/clothing/head/costume/crown = 1)
 
 	response_help_continuous = "glares at"
 	response_help_simple = "glare at"
@@ -29,23 +29,18 @@
 	attack_verb_simple = "slash"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 
-	// Slightly brown red, for the eyes
-	lighting_cutoff_red = 22
-	lighting_cutoff_green = 8
-	lighting_cutoff_blue = 5
-
 	attack_vis_effect = ATTACK_EFFECT_CLAW
 	unique_name = TRUE
 	faction = list(FACTION_RAT, FACTION_MAINT_CREATURES)
 
-	ai_controller = /datum/ai_controller/basic_controller/regal_rat
+	ai_controller = /datum/ai_controller/basic_controller/feral_squirrel
 
 	///Should we request a mind immediately upon spawning?
 	var/poll_ghosts = FALSE
 	/// String tied to our special moniker for examination. Contains a nice message tied to the potential funny regal name we have.
 	var/special_moniker = ""
 
-/mob/living/basic/regal_rat/Initialize(mapload)
+/mob/living/basic/feral_squirrel/Initialize(mapload)
 	. = ..()
 	ADD_TRAIT(src, TRAIT_VENTCRAWLER_ALWAYS, INNATE_TRAIT)
 
@@ -54,13 +49,13 @@
 
 	AddElement(/datum/element/waddling)
 	AddElement(/datum/element/ai_retaliate)
-	AddElement(/datum/element/door_pryer, pry_time = 5 SECONDS, interaction_key = REGALRAT_INTERACTION)
+	AddElement(/datum/element/door_pryer, pry_time = 3 SECONDS, interaction_key = FERALSQUIRREL_INTERACTION)
 	AddComponent(\
 		/datum/component/ghost_direct_control,\
 		poll_candidates = poll_ghosts,\
-		role_name = "the Regal Rat, cheesy be their crown",\
-		poll_ignore_key = POLL_IGNORE_REGAL_RAT,\
-		assumed_control_message = "You are an independent, invasive force on the station! Hoard coins, trash, cheese, and the like from the safety of darkness!",\
+		role_name = "A Red Squirrel, last of their kind",\
+		poll_ignore_key = POLL_IGNORE_FERAL_SQUIRREL,\
+		assumed_control_message = "You are an independent, invasive force on the station! Go Nuts!",\
 		after_assumed_control = CALLBACK(src, PROC_REF(became_player_controlled)),\
 		poll_chat_border_icon = /obj/item/food/cheese/wedge,\
 	)
@@ -73,12 +68,12 @@
 	riot.Grant(src)
 	ai_controller.set_blackboard_key(BB_RAISE_HORDE_ABILITY, riot)
 
-/mob/living/basic/regal_rat/examine(mob/user)
+/mob/living/basic/feral_squirrel/examine(mob/user)
 	. = ..()
 	if(user == src)
 		return
 
-	if(isregalrat(user))
+	if(isferalsquirrel(user))
 		. += span_warning("Who is this foolish false king? This will not stand!")
 		return
 
@@ -91,7 +86,7 @@
 
 	. += special_moniker
 
-/mob/living/basic/regal_rat/handle_environment(datum/gas_mixture/environment)
+/mob/living/basic/feral_squirrel/handle_environment(datum/gas_mixture/environment)
 	. = ..()
 	if(stat == DEAD || isnull(environment) || isnull(environment.gases[/datum/gas/miasma]))
 		return
@@ -99,62 +94,55 @@
 	if(miasma_percentage >= 0.25)
 		heal_bodypart_damage(1)
 
-/// Triggers an alert to all ghosts that the rat has become player controlled.
-/mob/living/basic/regal_rat/proc/became_player_controlled()
+/// Triggers an alert to all ghosts that the squirrel has become player controlled.
+/mob/living/basic/feral_squirrel/proc/became_player_controlled()
 	notify_ghosts(
-		"All rise for [name], ascendant to the throne in \the [get_area(src)].",
+		"[name], a red squirrel, one of the last of their king has snuck into \the [get_area(src)].",
 		source = src,
 		action = NOTIFY_ORBIT,
 		notify_flags = NOTIFY_CATEGORY_NOFLASH,
-		header = "Sentient Rat Created",
+		header = "Sentient Squirrel Created",
 	)
 
 /// Supplementary work we do when we login. Done this way so we synchronize with the ai controller shutting off and all that jazz as well as allowing more shit to be passed in if need be in future.
-/mob/living/basic/regal_rat/proc/on_login()
+/mob/living/basic/feral_squirrel/proc/on_login()
 	SIGNAL_HANDLER
 	if(!special_moniker)
 		grant_titles() // all players are special :)
 
-/// Grants the rat a special name.
-/mob/living/basic/regal_rat/proc/grant_titles()
+/// Grants the squirrel a special name.
+/mob/living/basic/feral_squirrel/proc/grant_titles()
 	// The title conveyed upon us thanks to our position.
 	var/static/list/titles = list(
-		"Bojar",
-		"Emperor",
-		"King",
-		"Lord",
-		"Master",
-		"Overlord",
-		"Prince",
-		"Shogun",
-		"Supreme",
-		"Tsar",
+		"Feral",
+		"Nutty",
+		"Survivor",
+		"Warrior",
+		"Ark",
+		"Savior",
+		"Last Hope",
+		"Wanderer",
+		"Deus Ex",
 	)
 
 	// The domain which we have conquered by inheritance or sheer force.
 	var/static/list/kingdoms = list(
-		"Cheese",
-		"Garbage",
-		"Maintenance",
-		"Miasma",
-		"Plague",
-		"Trash",
-		"Vermin",
+		"Nuts",
+		"Nutwave",
+		"Gems",
+		"Squirrels",
+		"Acorns",
+		"Forest",
 	)
 
 	// The descriptor of our character.
 	var/static/list/descriptors = list(
-		"Big Cheese",
-		"Brute",
-		"Champion of All Mislaid Creatures",
-		"Foul",
-		"Great",
-		"Grey",
-		"Horrible",
-		"Populator",
-		"Powerful",
-		"Quiet",
-		"Vain",
+		"Nut Cracker",
+		"Bvll",
+		"Champion of All Red Squirrels",
+		"Gray Slayer",
+		"Beaver",
+		"Terrible",
 	)
 
 	var/selected_title = pick(titles)
@@ -163,14 +151,14 @@
 	name = "[selected_title] [selected_kingdom], the [pick(descriptors)]" // ex "Tsar Maintenance, the Brute"
 	special_moniker = "You better not screw with [p_their()] [selected_kingdom]... How do you become a [selected_title] of that anyways?"
 
-/// Checks if we are able to attack this object, as well as send out the signal to see if we get any special regal rat interactions.
-/mob/living/basic/regal_rat/proc/pre_attack(mob/living/source, atom/target)
+/// Checks if we are able to attack this object, as well as send out the signal to see if we get any special regal squirrel interactions.
+/mob/living/basic/feral_squirrel/proc/pre_attack(mob/living/source, atom/target)
 	SIGNAL_HANDLER
 
-	if(DOING_INTERACTION(src, REGALRAT_INTERACTION) || !allowed_to_attack(target))
+	if(DOING_INTERACTION(src, FERALSQUIRREL_INTERACTION) || !allowed_to_attack(target))
 		return COMPONENT_HOSTILE_NO_ATTACK
 
-	if(SEND_SIGNAL(target, COMSIG_RAT_INTERACT, src) & COMPONENT_RAT_INTERACTED)
+	if(SEND_SIGNAL(target, COMSIG_SQUIRREL_INTERACT, src) & COMPONENT_SQUIRREL_INTERACTED)
 		return COMPONENT_HOSTILE_NO_ATTACK
 
 	if(isnull(mind))
@@ -181,7 +169,7 @@
 		return COMPONENT_HOSTILE_NO_ATTACK
 
 /// Checks if we are allowed to attack this mob. Will return TRUE if we are potentially allowed to attack, but if we end up in a case where we should NOT attack, return FALSE.
-/mob/living/basic/regal_rat/proc/allowed_to_attack(atom/the_target)
+/mob/living/basic/feral_squirrel/proc/allowed_to_attack(atom/the_target)
 	if(QDELETED(the_target))
 		return FALSE //wat
 
@@ -199,8 +187,8 @@
 
 	return TRUE
 
-/// Attempts to add rat spit to a target, effectively poisoning it to whoever eats it. Yuckers.
-/mob/living/basic/regal_rat/proc/poison_target(atom/target)
+/// Attempts to add squirrel spit to a target, effectively poisoning it to whoever eats it. Yuckers.
+/mob/living/basic/feral_squirrel/proc/poison_target(atom/target)
 	if(isnull(target.reagents) || !target.is_injectable(src, allowmobs = TRUE))
 		return
 
@@ -210,10 +198,10 @@
 		span_warning("You hear a disgusting slurping sound..."),
 	)
 
-	if (!do_after(src, 2 SECONDS, target, interaction_key = REGALRAT_INTERACTION))
+	if (!do_after(src, 2 SECONDS, target, interaction_key = FERALSQUIRREL_INTERACTION))
 		return
 
-	target.reagents.add_reagent(/datum/reagent/rat_spit, rand(1,3), no_react = TRUE)
+	target.reagents.add_reagent(/datum/reagent/squirrel_spit, rand(1,3), no_react = TRUE)
 	balloon_alert(src, "licked")
 
 /**
@@ -224,7 +212,7 @@
  * The "eating" is only conditional on the mob being injured in the first
  * place.
  */
-/mob/living/basic/regal_rat/proc/cheese_heal(obj/item/target, amount, message)
+/mob/living/basic/feral_squirrel/proc/cheese_heal(obj/item/target, amount, message)
 	if(health >= maxHealth)
 		balloon_alert(src, "you feel full!")
 		return
@@ -233,8 +221,8 @@
 	heal_bodypart_damage(amount)
 	qdel(target)
 
-/// Regal rat subtype which can be possessed by ghosts
-/mob/living/basic/regal_rat/controlled
+/// Regal squirrel subtype which can be possessed by ghosts
+/mob/living/basic/feral_squirrel/controlled
 	poll_ghosts = TRUE
 
-#undef REGALRAT_INTERACTION
+#undef FERALSQUIRREL_INTERACTION
