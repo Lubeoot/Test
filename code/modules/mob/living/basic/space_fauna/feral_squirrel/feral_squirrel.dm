@@ -1,18 +1,19 @@
 #define FERALSQUIRREL_INTERACTION "feralsquirrel"
 
-/// The cheesiest, most crowned squirrel of them all. Regent superior of all squirrels in maintenance... at least until someone else tries to encroach on their claim.
+/// The nuttiest, most red squirrel of them all. Gemmy Savior of all squirrels in space... at least until someone else tries evict them.
 /mob/living/basic/feral_squirrel
 	name = "feral squirrel"
 	desc = "A red squirrel, one of the last of their kind, displacement from their native habitats has led to them invading space structures."
 	icon_state = "squirreljak"
 	icon_living = "squirreljak"
 	icon_dead = "squirreljak_dead"
+	death_sound = 'sound/creatures/squirrel_death.ogg'
 	gender = MALE
 
 	maxHealth = 70
 	health = 70
 
-	butcher_results = list(/obj/item/food/meat = 2, /obj/item/clothing/head/costume/crown = 1)
+	butcher_results = list(/obj/item/food/grown/peanut = 2, /obj/item/clothing/head/costume/crown = 1)
 
 	response_help_continuous = "glares at"
 	response_help_simple = "glare at"
@@ -74,14 +75,14 @@
 		return
 
 	if(isferalsquirrel(user))
-		. += span_warning("Who is this foolish false king? This will not stand!")
+		. += span_warning("Who is this grey in disguise? Thats nuts!")
 		return
 
 	if(ismouse(user))
 		if(user.faction_check_atom(src, exact_match = TRUE))
-			. += span_notice("This is your king. Long live [p_their()] majesty!")
+			. += span_notice("This is your squirrel. They're nuts!")
 		else
-			. += span_warning("This is a false king! Strike [p_them()] down!")
+			. += span_warning("This is a grey in disguise! Thats nuts!")
 		return
 
 	. += special_moniker
@@ -97,7 +98,7 @@
 /// Triggers an alert to all ghosts that the squirrel has become player controlled.
 /mob/living/basic/feral_squirrel/proc/became_player_controlled()
 	notify_ghosts(
-		"[name], a red squirrel, one of the last of their king has snuck into \the [get_area(src)].",
+		"[name], a red squirrel, one of the last of their kind has snuck into \the [get_area(src)].",
 		source = src,
 		action = NOTIFY_ORBIT,
 		notify_flags = NOTIFY_CATEGORY_NOFLASH,
@@ -149,7 +150,7 @@
 	var/selected_kingdom = pick(kingdoms)
 
 	name = "[selected_title] [selected_kingdom], the [pick(descriptors)]" // ex "Tsar Maintenance, the Brute"
-	special_moniker = "You better not screw with [p_their()] [selected_kingdom]... How do you become a [selected_title] of that anyways?"
+	special_moniker = "You thought red squirrels were extinct, whats this nutty guy doing here?"
 
 /// Checks if we are able to attack this object, as well as send out the signal to see if we get any special regal squirrel interactions.
 /mob/living/basic/feral_squirrel/proc/pre_attack(mob/living/source, atom/target)
@@ -193,16 +194,16 @@
 		return
 
 	visible_message(
-		span_warning("[src] starts licking [target] passionately!"),
-		span_notice("You start licking [target]..."),
-		span_warning("You hear a disgusting slurping sound..."),
+		span_warning("[src] starts chewing on [target]!"),
+		span_notice("You start chewing on [target]..."),
+		span_warning("You hear a terrible chewing sound..."),
 	)
 
 	if (!do_after(src, 2 SECONDS, target, interaction_key = FERALSQUIRREL_INTERACTION))
 		return
 
 	target.reagents.add_reagent(/datum/reagent/squirrel_spit, rand(1,3), no_react = TRUE)
-	balloon_alert(src, "licked")
+	balloon_alert(src, "chewed")
 
 /**
  * Conditionally "eat" cheese object and heal, if injured.

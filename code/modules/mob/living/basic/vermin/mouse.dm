@@ -198,13 +198,13 @@
 
 /// Attempts to consume a piece of cheese, causing a few effects.
 /mob/living/basic/mouse/proc/try_consume_cheese(obj/item/food/cheese/cheese)
-	// Royal cheese will evolve us into a regal rat
+	// Royal cheese will evolve us into a Feral Squirrel
 	if(istype(cheese, /obj/item/food/cheese/royal))
 		visible_message(
 			span_warning("[src] devours [cheese]! They morph into something... greater!"),
 			span_notice("You devour [cheese], and start morphing into something... greater!"),
 		)
-		evolve_into_regal_rat()
+		evolve_into_feral_squirrel()
 		qdel(cheese)
 		return
 
@@ -233,8 +233,8 @@
 
 	qdel(cheese)
 
-/// Evolves this rat into a regal rat
-/mob/living/basic/mouse/proc/evolve_into_regal_rat()
+/// Evolves this rat into a feral squirrel
+/mob/living/basic/mouse/proc/evolve_into_feral_squirrel()
 	var/mob/living/basic/feral_squirrel/controlled/feralsquirrel = new(loc)
 	mind?.transfer_to(feralsquirrel)
 	INVOKE_ASYNC(feralsquirrel, TYPE_PROC_REF(/atom/movable, say), "RISE, MY SUBJECTS! SCREEEEEEE!")
