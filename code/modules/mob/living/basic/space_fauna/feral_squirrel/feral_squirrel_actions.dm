@@ -16,11 +16,12 @@
 
 /datum/action/cooldown/mob_cooldown/domain/proc/domain()
 	var/turf/location = get_turf(owner)
+	playsound(get_turf(owner), 'sound/creatures/squirrel_search.ogg', 75, TRUE, vary = FALSE)
 	switch (rand(1,10))
 		if (8)
-			new /obj/effect/decal/cleanable/vomit(location)
+			new /obj/item/stack/sheet/mineral/diamond(location)
 		if (9)
-			new /obj/effect/decal/cleanable/vomit/old(location)
+			new /obj/item/food/grown/peanut(location)
 		if (10)
 			new /obj/effect/decal/cleanable/oil/slippery(location)
 		else
@@ -84,6 +85,7 @@
 		uplifted_mice = convert_mouse(nearby_mouse) || uplifted_mice
 	if (uplifted_mice)
 		owner.visible_message(span_warning("[owner] sings nutwave, making the mice terrible!"))
+		playsound(get_turf(owner), 'sound/creatures/squirrel_summon.ogg', 75, TRUE, vary = FALSE)
 		return
 
 	var/static/list/converted_check_list = list(FACTION_RAT)
@@ -92,6 +94,7 @@
 		uplifted_roach = convert_roach(nearby_roach, converted_check_list) || uplifted_roach
 	if (uplifted_roach)
 		owner.visible_message(span_warning("[owner] sings nutwave, making the roach feel nostalgic!"))
+		playsound(get_turf(owner), 'sound/creatures/squirrel_summon.ogg', 75, TRUE, vary = FALSE)
 		return
 
 	var/uplifted_frog = FALSE
@@ -99,13 +102,14 @@
 		uplifted_frog = convert_frog(nearby_frog, converted_check_list) || uplifted_frog
 	if (uplifted_frog)
 		owner.visible_message(span_warning("[owner] sings nutwave, turning the frog into a ribbit rally!"))
+		playsound(get_turf(owner), 'sound/creatures/squirrel_summon.ogg', 75, TRUE, vary = FALSE)
 		return
 
 	var/rat_cap = CONFIG_GET(number/ratcap)
 	if (LAZYLEN(SSmobs.cheeserats) >= rat_cap)
 		to_chat(owner,span_warning("There's too many terrible mice on the booru to force a new one! Delete some first!"))
 		return
-	new /mob/living/basic/mouse/ratking(owner.loc)
+	new /mob/living/basic/mouse/terrible(owner.loc)
 	owner.visible_message(span_warning("[owner] sings nutwave, turning the mouse terrible!"))
 
 /// Makes a passed mob into our minion
@@ -214,12 +218,12 @@
  */
 
 /datum/reagent/squirrel_spit
-	name = "squirrel Spit"
-	description = "Something coming from a squirrel. Dear god! Who knows where it's been!"
+	name = "Squirrel Spit"
+	description = "Something coming from a squirrel. Capable of making you go nuts."
 	reagent_state = LIQUID
 	color = "#C8C8C8"
 	metabolization_rate = 0.03 * REAGENTS_METABOLISM
-	taste_description = "something funny"
+	taste_description = "something nutty"
 	overdose_threshold = 20
 
 /datum/reagent/squirrel_spit/on_mob_metabolize(mob/living/L)

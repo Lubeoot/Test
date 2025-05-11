@@ -2,7 +2,7 @@
 	var/disease_chance = 25
 	var/diseased = TRUE
 
-/mob/living/basic/mouse/ratking
+/mob/living/basic/mouse/terrible
 	diseased = FALSE
 
 /mob/living/basic/mouse/Initialize(mapload, tame, new_body_color)
