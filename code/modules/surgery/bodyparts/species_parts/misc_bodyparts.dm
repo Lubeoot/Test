@@ -374,6 +374,36 @@
 /obj/item/bodypart/arm/right/shadow/nightmare
 	hand_traits = list(TRAIT_CHUNKYFINGERS)
 
+///THOUGH (These are the exact same as shadow limbs, which were kept for usage as sprites.)
+/obj/item/bodypart/head/though
+	limb_id = SPECIES_THOUGH
+	is_dimorphic = FALSE
+	should_draw_greyscale = FALSE
+	head_flags = NONE
+
+/obj/item/bodypart/chest/though
+	limb_id = SPECIES_THOUGH
+	is_dimorphic = FALSE
+	should_draw_greyscale = FALSE
+
+/obj/item/bodypart/arm/left/though
+	limb_id = SPECIES_THOUGH
+	should_draw_greyscale = FALSE
+	hand_traits = list(TRAIT_CHUNKYFINGERS)
+
+/obj/item/bodypart/arm/right/though
+	limb_id = SPECIES_THOUGH
+	should_draw_greyscale = FALSE
+	hand_traits = list(TRAIT_CHUNKYFINGERS)
+
+/obj/item/bodypart/leg/left/though
+	limb_id = SPECIES_THOUGH
+	should_draw_greyscale = FALSE
+
+/obj/item/bodypart/leg/right/though
+	limb_id = SPECIES_THOUGH
+	should_draw_greyscale = FALSE
+
 ///SKELETON
 /obj/item/bodypart/head/skeleton
 	biological_state = BIO_BONE

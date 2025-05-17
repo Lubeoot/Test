@@ -104,7 +104,7 @@ GLOBAL_LIST_INIT(turfs_openspace, typecacheof(list(
 #define isdullahan(A) (is_species(A, /datum/species/dullahan))
 #define ismonkey(A) (is_species(A, /datum/species/monkey))
 #define isandroid(A) (is_species(A, /datum/species/android))
-#define isnightmare(A) (is_species(A, /datum/species/shadow/nightmare))
+#define isthougher(A) (is_species(A, /datum/species/though/thougher))
 #define isipc(A) (is_species(A, /datum/species/ipc)) // Monkestation Addition
 #define isgoblin(A) (is_species(A, /datum/species/goblin)) //Monkestation Addition
 #define isfloran(A) (is_species(A, /datum/species/floran)) //Monkestation Addition

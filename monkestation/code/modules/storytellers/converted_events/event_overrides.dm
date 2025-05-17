@@ -40,6 +40,11 @@
 	track = EVENT_TRACK_MUNDANE
 	tags = list(TAG_COMMUNAL, TAG_SPOOKY)
 
+/datum/round_event_control/cado
+	track = EVENT_TRACK_MAJOR
+	tags = list(TAG_COMBAT, TAG_SPOOKY, TAG_EXTERNAL, TAG_ALIEN, TAG_OUTSIDER_ANTAG)
+	checks_antag_cap = TRUE
+
 /datum/round_event_control/carp_migration
 	track = EVENT_TRACK_MODERATE
 	tags = list(TAG_DESTRUCTIVE, TAG_COMBAT, TAG_SPACE, TAG_EXTERNAL, TAG_ALIEN)
@@ -124,16 +129,6 @@
 	track = EVENT_TRACK_MUNDANE
 	tags = list(TAG_DESTRUCTIVE, TAG_ALIEN) //not really alien but rat lords kind of are
 	event_group = /datum/event_group/guests
-
-/datum/round_event_control/morph
-	track = EVENT_TRACK_MAJOR
-	tags = list(TAG_COMBAT, TAG_SPOOKY, TAG_EXTERNAL, TAG_ALIEN, TAG_OUTSIDER_ANTAG)
-	checks_antag_cap = TRUE
-
-/datum/round_event_control/nightmare
-	track = EVENT_TRACK_MAJOR
-	tags = list(TAG_COMBAT, TAG_SPOOKY, TAG_EXTERNAL, TAG_ALIEN, TAG_OUTSIDER_ANTAG)
-	checks_antag_cap = TRUE
 
 /datum/round_event_control/obsessed
 	weight = 0 // use storyteller variants instead
@@ -245,6 +240,11 @@
 	track = EVENT_TRACK_MODERATE
 	tags = list(TAG_DESTRUCTIVE, TAG_COMMUNAL)
 	event_group = /datum/event_group/error
+
+/datum/round_event_control/thougher
+	track = EVENT_TRACK_MAJOR
+	tags = list(TAG_COMBAT, TAG_SPOOKY, TAG_EXTERNAL, TAG_ALIEN, TAG_OUTSIDER_ANTAG)
+	checks_antag_cap = TRUE
 
 /datum/round_event_control/tram_malfunction
 	track = EVENT_TRACK_MUNDANE

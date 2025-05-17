@@ -524,12 +524,12 @@
 	log_dynamic("[key_name(new_xeno)] was spawned as an alien by the midround ruleset.")
 	return new_xeno
 
-/// Midround Nightmare Ruleset (From Ghosts)
-/datum/dynamic_ruleset/midround/from_ghosts/nightmare
-	name = "Nightmare"
+/// Midround Thougher Ruleset (From Ghosts, who else though?)
+/datum/dynamic_ruleset/midround/from_ghosts/thougher
+	name = "Thougher"
 	midround_ruleset_style = MIDROUND_RULESET_STYLE_LIGHT
-	antag_datum = /datum/antagonist/nightmare
-	antag_flag = ROLE_NIGHTMARE
+	antag_datum = /datum/antagonist/thougher
+	antag_flag = ROLE_THOUGHER
 	antag_flag_override = ROLE_ALIEN
 	required_enemies = list(2,2,1,1,1,1,1,0,0,0)
 	required_candidates = 1
@@ -538,27 +538,27 @@
 	minimum_players = 15
 	repeatable = TRUE
 
-/datum/dynamic_ruleset/midround/from_ghosts/nightmare/acceptable(population = 0, threat = 0)
+/datum/dynamic_ruleset/midround/from_ghosts/thougher/acceptable(population = 0, threat = 0)
 	var/turf/spawn_loc = find_maintenance_spawn(atmos_sensitive = TRUE, require_darkness = TRUE) //Checks if there's a single safe, dark tile on station.
 	if(!spawn_loc)
 		return FALSE
 	return ..()
 
-/datum/dynamic_ruleset/midround/from_ghosts/nightmare/generate_ruleset_body(mob/applicant)
+/datum/dynamic_ruleset/midround/from_ghosts/thougher/generate_ruleset_body(mob/applicant)
 	var/datum/mind/player_mind = new /datum/mind(applicant.key)
 	player_mind.active = TRUE
 
-	var/mob/living/carbon/human/new_nightmare = new (find_maintenance_spawn(atmos_sensitive = TRUE, require_darkness = TRUE))
-	player_mind.transfer_to(new_nightmare)
-	player_mind.set_assigned_role(SSjob.GetJobType(/datum/job/nightmare))
-	player_mind.special_role = ROLE_NIGHTMARE
-	player_mind.add_antag_datum(/datum/antagonist/nightmare)
-	new_nightmare.set_species(/datum/species/shadow/nightmare)
+	var/mob/living/carbon/human/new_thougher = new (find_maintenance_spawn(atmos_sensitive = TRUE, require_darkness = TRUE))
+	player_mind.transfer_to(new_thougher)
+	player_mind.set_assigned_role(SSjob.GetJobType(/datum/job/thougher))
+	player_mind.special_role = ROLE_THOUGHER
+	player_mind.add_antag_datum(/datum/antagonist/thougher)
+	new_thougher.set_species(/datum/species/though/thougher)
 
-	playsound(new_nightmare, 'sound/magic/ethereal_exit.ogg', 50, TRUE, -1)
-	message_admins("[ADMIN_LOOKUPFLW(new_nightmare)] has been made into a Nightmare by the midround ruleset.")
-	log_dynamic("[key_name(new_nightmare)] was spawned as a Nightmare by the midround ruleset.")
-	return new_nightmare
+	playsound(new_thougher, 'sound/magic/ethereal_exit.ogg', 50, TRUE, -1)
+	message_admins("[ADMIN_LOOKUPFLW(new_thougher)] has been made into a Thougher by the midround ruleset.")
+	log_dynamic("[key_name(new_thougher)] was spawned as a Thougher by the midround ruleset.")
+	return new_thougher
 
 /// Midround Space Dragon Ruleset (From Ghosts)
 /datum/dynamic_ruleset/midround/from_ghosts/space_dragon

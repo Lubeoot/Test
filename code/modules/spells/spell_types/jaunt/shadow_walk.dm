@@ -10,7 +10,7 @@
 	jaunt_type = /obj/effect/dummy/phased_mob/shadow
 
 	/// The max amount of lumens on a turf allowed before we can no longer enter jaunt with this
-	var/light_threshold = SHADOW_SPECIES_LIGHT_THRESHOLD
+	var/light_threshold = THOUGH_SPECIES_LIGHT_THRESHOLD
 
 /datum/action/cooldown/spell/jaunt/shadow_walk/Grant(mob/grant_to)
 	. = ..()
@@ -54,7 +54,7 @@
 /obj/effect/dummy/phased_mob/shadow
 	name = "shadows"
 	/// Max amount of light permitted before being kicked out
-	var/light_max = SHADOW_SPECIES_LIGHT_THRESHOLD
+	var/light_max = THOUGH_SPECIES_LIGHT_THRESHOLD
 	/// The amount that shadow heals us per SSobj tick (times seconds_per_tick)
 	var/healing_rate = 1.5
 	/// When cooldown is active, you are prevented from moving into tiles that would eject you from your jaunt
@@ -93,11 +93,11 @@
 /obj/effect/dummy/phased_mob/shadow/phased_check(mob/living/user, direction)
 	. = ..()
 	if(. && isspaceturf(.))
-		to_chat(user, span_warning("It really would not be wise to go into space."))
+		to_chat(user, span_warning("Space is full of light thoughbeit."))
 		return FALSE
 	if(check_light_level(.))
 		// MONKESTATION EDIT START
-		SEND_SIGNAL(user, COMSIG_NIGHTMARE_SNUFF_CHECK, .) // Snuffs nearby lights as if we had already moved to the tile.
+		SEND_SIGNAL(user, COMSIG_THOUGHER_SNUFF_CHECK, .) // Snuffs nearby lights as if we had already moved to the tile.
 		if(!check_light_level(.)) // Now we check again after snuffing any dim lights.
 			return
 		// MONKESTATION EDIT END
