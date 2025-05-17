@@ -2,10 +2,10 @@
  * An armblade that instantly snuffs out lights
  */
 /obj/item/light_eater
-	name = "light eater" //as opposed to heavy eater
+	name = "light eater"
 	icon = 'icons/obj/weapons/changeling_items.dmi'
-	icon_state = "arm_blade"
-	inhand_icon_state = "arm_blade"
+	icon_state = "arm_blade_though"
+	inhand_icon_state = "arm_blade_though"
 	force = 25
 	armour_penetration = 35
 	lefthand_file = 'icons/mob/inhands/antag/changeling_lefthand.dmi'

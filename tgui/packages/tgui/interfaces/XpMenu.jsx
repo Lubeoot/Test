@@ -16,7 +16,7 @@ export const XpMenu = (props) => {
     'Clown Operative',
     'Lone Operative',
     'Morph',
-    'Nightmare',
+    'Thougher',
     'Yellow Clown',
     'Discount Godzilla',
     'Gorilla',

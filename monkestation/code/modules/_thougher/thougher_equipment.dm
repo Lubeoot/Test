@@ -8,13 +8,13 @@
 	. = ..()
 	var/static/list/containers_connections = list(COMSIG_MOVABLE_MOVED = PROC_REF(on_moved))
 	AddComponent(/datum/component/connect_containers, user, containers_connections)
-	RegisterSignal(user, COMSIG_NIGHTMARE_SNUFF_CHECK, PROC_REF(do_snuff_check))
+	RegisterSignal(user, COMSIG_THOUGHER_SNUFF_CHECK, PROC_REF(do_snuff_check))
 	RegisterSignal(user, COMSIG_MOVABLE_MOVED, PROC_REF(on_moved))
 	START_PROCESSING(SSprocessing, src)
 
 /obj/item/light_eater/dropped(mob/user, silent)
 	. = ..()
-	UnregisterSignal(user, list(COMSIG_NIGHTMARE_SNUFF_CHECK, COMSIG_MOVABLE_MOVED))
+	UnregisterSignal(user, list(COMSIG_THOUGHER_SNUFF_CHECK, COMSIG_MOVABLE_MOVED))
 	STOP_PROCESSING(SSprocessing, src)
 
 /obj/item/light_eater/proc/on_moved(atom/movable/source, atom/old_loc, dir, forced, list/old_locs)

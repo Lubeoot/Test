@@ -1077,11 +1077,11 @@
 /mob/living/carbon/human/species/pod
 	race = /datum/species/pod
 
-/mob/living/carbon/human/species/shadow
-	race = /datum/species/shadow
+/mob/living/carbon/human/species/though
+	race = /datum/species/though
 
-/mob/living/carbon/human/species/shadow/nightmare
-	race = /datum/species/shadow/nightmare
+/mob/living/carbon/human/species/though/thougher
+	race = /datum/species/though/thougher
 
 /mob/living/carbon/human/species/skeleton
 	race = /datum/species/skeleton

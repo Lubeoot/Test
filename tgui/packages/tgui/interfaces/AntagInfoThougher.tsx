@@ -9,7 +9,7 @@ const noticestyle = {
   color: 'lightblue',
 };
 
-export const AntagInfoNightmare = (props) => {
+export const AntagInfoThougher = (props) => {
   return (
     <Window width={620} height={470}>
       <Window.Content backgroundColor="#0d0d0d">
@@ -17,13 +17,12 @@ export const AntagInfoNightmare = (props) => {
           <Stack.Item width="46.2%">
             <Section fill>
               <Stack vertical fill>
-                <Stack.Item fontSize="25px">You are a Nightmare.</Stack.Item>
+                <Stack.Item fontSize="25px">You are a Thougher.</Stack.Item>
                 <Stack.Item>
                   <BlockQuote>
-                    You are a creature from beyond the stars that has incredibly
-                    strong powers in the darkness, becoming nigh unbeatable.
-                    Unfortunately, you wither and burn away in the light. You
-                    must use your
+                    You were once a jakker, but lost a soyduel to a creature
+                    of pitch black darkness and gleaming white gemeralds for
+                    eyes, upon your defeat, his curse spread to you.
                     <span style={noticestyle}>&ensp;light eater</span> to dim
                     the station, making hunting easier.
                   </BlockQuote>

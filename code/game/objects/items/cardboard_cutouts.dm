@@ -259,14 +259,14 @@
 /datum/cardboard_cutout/wizard/get_name()
 	return "[pick(GLOB.wizard_first)] [pick(GLOB.wizard_second)]"
 
-/datum/cardboard_cutout/nightmare
-	name = "Nightmare"
-	applied_name = "nightmare"
-	applied_desc = "A cardboard cutout of a nightmare."
-	species = /datum/species/shadow/nightmare
+/datum/cardboard_cutout/thougher
+	name = "Thougher"
+	applied_name = "thougher"
+	applied_desc = "A cardboard cutout of a thougher, it looks so real though, doebeit."
+	species = /datum/species/though/thougher
 
-/datum/cardboard_cutout/nightmare/get_name()
-	return pick(GLOB.nightmare_names)
+/datum/cardboard_cutout/thougher/get_name()
+	return pick(GLOB.thougher_names)
 
 /datum/cardboard_cutout/xenomorph
 	name = "Xenomorph"
