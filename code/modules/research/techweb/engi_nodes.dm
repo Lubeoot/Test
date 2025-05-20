@@ -1,6 +1,6 @@
 /datum/techweb_node/engineering
 	id = "engineering"
-	display_name = "Industrial Engineering"
+	display_name = "Industrial Engineering + Tier Two Parts"
 	description = "A refresher course on modern engineering technology."
 	prereq_ids = list("base")
 	design_ids = list(
@@ -134,54 +134,14 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 2500)
 
-/datum/techweb_node/emp_adv
-	id = "emp_adv"
-	display_name = "Advanced Electromagnetic Theory"
-	description = "Determining whether reversing the polarity will actually help in a given situation."
-	prereq_ids = list("emp_basic")
-	design_ids = list(
-		"ultra_micro_laser",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 3000)
-	discount_experiments = list(/datum/experiment/scanning/points/machinery_pinpoint_scan/tier2_microlaser = 1500)
-
-/datum/techweb_node/emp_super
-	id = "emp_super"
-	display_name = "Quantum Electromagnetic Technology" //bs
-	description = "Even better electromagnetic technology."
-	prereq_ids = list("emp_adv")
-	design_ids = list(
-		"quadultra_micro_laser",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
-	discount_experiments = list(
-		/datum/experiment/scanning/points/machinery_pinpoint_scan/tier3_microlaser = 4000,
-		/datum/experiment/ordnance/gaseous/noblium = 10000,
-	)
-
-/datum/techweb_node/high_efficiency
-	id = "high_efficiency"
-	display_name = "High Efficiency Parts"
-	description = "Finely-tooled manufacturing techniques allowing for picometer-perfect precision levels."
-	prereq_ids = list("engineering", "datatheory")
-	design_ids = list(
-		"pico_mani",
-		"super_matter_bin",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 7500)
-	discount_experiments = list(/datum/experiment/scanning/points/machinery_tiered_scan/tier2_lathes = 5000)
-
 /datum/techweb_node/adv_power
 	id = "adv_power"
 	display_name = "Advanced Power Manipulation"
 	description = "How to get more zap."
 	prereq_ids = list("engineering")
 	design_ids = list(
-		"hyper_cell",
 		"power_turbine_console",
 		"smes",
-		"super_capacitor",
-		"super_cell",
 		"turbine_compressor",
 		"turbine_rotor",
 		"turbine_stator",

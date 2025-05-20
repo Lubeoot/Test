@@ -34,7 +34,6 @@
 		"bs_rped",
 		"minerbag_holding",
 		"ore_silo",
-		"phasic_scanning",
 		"plumbing_receiver",
 		"roastingstick",
 	)
@@ -64,31 +63,15 @@
 	description = "Extreme reduction in space required for bluespace engines, leading to portable bluespace technology."
 	prereq_ids = list("bluespace_travel", "practical_bluespace", "high_efficiency")
 	design_ids = list(
-		"bluespace_matter_bin",
 		"bluespacebodybag",
 		"medicalbed_emergency",
-		"femto_mani",
 		"quantum_keycard",
 		"swapper",
-		"triphasic_scanning",
 		"wormholeprojector",
 		"advanced_gps", // monkestation edit: advanced gps
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 10000)
-	discount_experiments = list(/datum/experiment/scanning/points/machinery_tiered_scan/tier3_variety = 5000)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
 		/* /datum/experiment/exploration_scan/random/condition) this should have a point cost but im not even sure the experiment works properly lmao*/
-
-/datum/techweb_node/bluespace_power
-	id = "bluespace_power"
-	display_name = "Bluespace Power Technology"
-	description = "Even more powerful.. power!"
-	prereq_ids = list("adv_power", "practical_bluespace")
-	design_ids = list(
-		"bluespace_cell",
-		"quadratic_capacitor",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 4000)
-	discount_experiments = list(/datum/experiment/scanning/points/machinery_pinpoint_scan/tier3_cells = 3000)
 
 /datum/techweb_node/regulated_bluespace
 	id = "regulated_bluespace"
@@ -147,3 +130,42 @@
 		"bag_holding",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
+
+/datum/techweb_node/tier_three
+	id = "tier_three"
+	display_name = "Tier Three Parts"
+	description = "We can rebuild it. We have the technology. We have the capability to make the station's first useful machine. Better than it was before, Better... Stronger... Faster."
+	prereq_ids = list("emp_basic", "engineering", "datatheory")
+	design_ids = list(
+		"phasic_scanning",
+		"ultra_micro_laser",
+		"pico_mani",
+		"super_matter_bin",
+		"hyper_cell",
+		"super_capacitor",
+		"super_cell",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 12500)
+	discount_experiments = list(
+		/datum/experiment/scanning/points/machinery_pinpoint_scan/tier2_microlaser = 2500,
+		/datum/experiment/scanning/points/machinery_tiered_scan/tier2_lathes = 5000,
+	)
+
+/datum/techweb_node/tier_four
+	id = "tier_four"
+	display_name = "Tier Four Parts"
+	description = "The problem's plain to see, too much technology."
+	prereq_ids = list("tier_three", "adv_power", "practical_bluespace")
+	design_ids = list(
+	"bluespace_matter_bin",
+	"femto_mani",
+	"triphasic_scanning",
+	"bluespace_cell",
+	"quadratic_capacitor",
+	"quadultra_micro_laser",
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 15000)
+	discount_experiments = list(
+		/datum/experiment/scanning/points/machinery_tiered_scan/tier3_variety = 5000,
+		/datum/experiment/ordnance/gaseous/noblium = 7500,
+	)
